@@ -47,6 +47,7 @@ var tasks = [
 if(process.env.NODE_ENV === 'production'){
   tasks.concat([
     rimraf.bind(rimraf, "public/js/edit-bundle.js"),
+    rimraf.bind(rimraf, "public/js/templates"),
     executeCommand('node_modules/.bin/jade-amd --from views/includes --to public/js/templates --jaderuntime jaderuntime'),
     optimize
   ]);
