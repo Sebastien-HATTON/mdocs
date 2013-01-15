@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+
+var exec = require("child_process").exec,
+    async = require("async"),
+    rimraf = require("rimraf"),
+    fs = require('fs'),
+    JSON5 = require('json5'),
+    xtend = require('xtend'),
+    requirejs = require('requirejs');
+
+function executeCommand(command){
+  return function(callback){
+    var childProc = exec(command, {}, callback || function(){});
+    childProc.stdout.pipe(process.stdout);
+    childProc.stderr.pipe(process.stderr);
+  };
+}
+
+function extractConfig(path) {
+  var file = fs.readFileSync(path).toString();
+  var config = file.replace(/require\.config\(([^\)]+)\);/gi, '$1');
+  return JSON5.parse(config);
+}
+
+function optimize(cb) {
+  var config = xtend(
+    extractConfig('./public/js/require.config.js'), {
+      name:    'components/require/require',
+      include: ['js/edit'],
+      baseUrl: './public',
+      out:     './public/js/edit-bundle.js'
+    });
+
+  requirejs.optimize(config, function (text) {
+    console.log(text);
+    cb();
+  }, function (err) {
+    console.log(err);
+    process.exit(1);
+  });
+}
+
+var tasks = [
+  executeCommand("bower install")
+];
+
+if(process.env.NODE_ENV === 'production'){
+  tasks.concat([
+    rimraf.bind(rimraf, "public/js/edit-bundle.js"),
+    executeCommand('node_modules/.bin/jade-amd --from views/includes --to public/js/templates --jaderuntime jaderuntime'),
+    optimize
+  ]);
+}
+
+async.series(tasks, function(){
+  console.log('finished!');
+});

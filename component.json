@@ -1,0 +1,17 @@
+{
+  "name": "markdoio",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "1.8.3",
+    "bootstrap": "~2.2.2",
+    "require": "~2.1.2",
+    "reqwest": "~0.6.3",
+    "ace": "https://github.com/ajaxorg/ace/archive/7601a904cb3dfbcb7f815778e1e380eb431f1644.zip",
+    "pilot": "git://github.com/jfromaniello/pilot.git",
+    "text": "https://github.com/malsup/blockui.git",
+    "showdown": "~0.3.1",
+    "jKey": "https://github.com/OscarGodson/jKey.git",
+    "jquery.jeditable": "http://www.appelsiini.net/download/jquery.jeditable.js",
+    "jam-jade-runtime": "https://github.com/jfromaniello/jam-jade-runtime.git"
+  }
+}

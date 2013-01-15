@@ -1,0 +1,54 @@
+extends layout
+
+block menu-extras
+  li.dropdown
+    a.dropdown-toggle(href='#', data-toggle='dropdown') Document 
+      b.caret
+    ul.dropdown-menu
+      li
+        a(href='#settings-popup', data-toggle="modal") settings
+      li
+        a(href='/view/' + doc._id.toString(), target='_blank') preview
+      li
+        a(href='#') share
+
+block content
+  .page-header
+      h1#name= doc.name || 'untitled'
+  #editor
+  #preview
+  input#initial(type='hidden', value=snapshot)
+
+  include includes/settings
+
+  #key-shortcuts.modal.hide.fade
+    .modal-header
+      button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+      h3 shortcuts
+    .modal-body
+      ul.shortcut-list
+        li
+          .key-shortcut alt-s
+          .key-shortcut-desc settings
+        li
+          .key-shortcut alt-e
+          .key-shortcut-desc switch between edition and preview mode
+        li
+          .key-shortcut alt-h
+          .key-shortcut-desc show shortcuts
+    .modal-footer
+      a.btn(href="#", data-dismiss="modal", id="close-helper", tabindex=0) Close
+
+block scripts
+  script
+    window.docId = "#{doc._id.toString()}";
+    window.docTitle = "#{doc.title || ''}";
+
+  if env != "production"
+    script(src="/components/require/require.js")
+    script(src="/js/require.config.js")
+  else
+    script(src="/js/edit-bundle.js")
+
+  script(type="text/javascript")
+    require(["js/edit"], function(index){});

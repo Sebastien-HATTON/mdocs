@@ -1,0 +1,35 @@
+#settings-popup.form-horizontal.modal.hide.fade
+  .modal-header
+    h3 settings
+  .modal-body
+    form.form-horizontal
+      .control-group
+        label.control-label(for='doc-url') URL
+        .controls
+          input.input-xxlarge#doc-url(type='text', 
+                                      value=baseUrl + '/edit/' + doc._id.toString(), 
+                                      style='width: 440px'
+                                      readonly)
+      .control-group
+        label.control-label(for='doc-url-viewer') Viewer
+        .controls
+          input.input-xxlarge#doc-url-viewer(type='text', 
+                                      value=baseUrl + '/view/' + doc._id.toString(), 
+                                      style='width: 440px'
+                                      readonly)
+
+    h4 Collaborators
+    table#collabs-table.table.permissions-table
+      for c in (doc.collaborators || [])
+        include collaborator-row
+    
+    h4 Add collaborator
+    form#add-collab.form-inline
+      input.input#new-collab(type='text', placeholder='bob@mail.com', name='email')
+      select.input-small#new-collab-type(style='width: 100px;', name='type')
+        option can edit
+        option can view
+      button.btn(type='submit') Add
+
+  .modal-footer
+    input.btn.btn-primary(type='submit') Save

@@ -1,0 +1,40 @@
+mixin menu(menuTitle, url)
+  li(class=title.toLowerCase() == menuTitle.toLowerCase() ? "active" : "")
+    a(href=url)= menuTitle
+
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.btn.btn-navbar.pull-left(data-toggle="collapse", data-target=".nav-collapse")
+        i.icon-list.icon-white
+        span.caret
+
+      a.brand(href="/") markdio
+      
+      div.nav-collapse
+        ul.nav
+          +menu('Home', '/')
+          
+          block menu-extras
+          
+          +menu('New', '/new')
+          +menu('My docs', '/my-docs')
+        
+      if !user
+        a.sign-in.btn.btn-primary.pull-right(href="/login") 
+          i.icon-user
+          |  login
+      else
+        div.dropdown.pull-right
+          a.btn.btn-inverse.dropdown-toggle(href="#", data-toggle="dropdown", role="button") 
+            | #{user.displayName} 
+            span.caret
+          ul.dropdown-menu(role="menu", aria-labelledby="dLabel")
+            //- li
+            //-   a(href="/settings")
+            //-     b #{user.email}
+            //-     br
+            //-     small Configuración
+            //- li.divider
+            li 
+              a(href="/logout") sign out

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 markd.io
+  
+  img(src='/img/markdown.png')
+  br
+  br
+  p 
+    | Hello and welcome to markdio!
+    | the best way to collaborate with 
+    a(href="http://daringfireball.net/projects/markdown/syntax") markdown
+    | .
+
+block scripts
+  script(src="components/require/require.js")
+  script(src="js/require.config.js")
+
+  script(type="text/javascript")
+    require(["js/index.js"], function(index){
+    });

@@ -1,0 +1,114 @@
+body {
+  padding-top: 50px;
+}
+
+body, html {
+  height: 96%;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+}
+
+#editor{
+  height: 80%;
+  width: 100%;
+  line-height: 30px;
+}
+
+.shortcut-list{
+  list-style: none;
+}
+
+.shortcut-list li{
+  padding-bottom: 10px;
+}
+
+.key-shortcut {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 6px;
+  min-width: 10px;
+  text-align: center;
+  font-family: Monaco, "Liberation Mono", Courier, monospace;
+  background: #333;
+  color: #EEE;
+  border-radius: 2px;
+  text-shadow: 1px 1px 0 black;
+}
+
+.key-shortcut-desc {
+  display: inline;
+  margin: 0 0 0 5px;
+  color: #666;
+}
+
+#preview{
+  display: none;
+}
+
+.input-title input {
+  font-size: 38.5px;
+}
+
+.permissions-dd {
+  width: 190px;
+/*  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;*/
+  height: 32px;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.permissions-dd:hover {
+  /*border-color: #999;*/
+  cursor: pointer;
+  color: #999;
+}
+
+.permissions-dd form select {
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.permissions-dd form select:focus {
+  border: none;
+  outline: none;
+}
+
+.permissions-dd form {
+  padding: 0;
+  margin: 0;
+}
+
+.permissions-table tr {
+  height: 48px;
+}
+
+.permissions-table tr td {
+  vertical-align: middle;
+}
+
+.modal-body form .controls {
+  margin-left: 70px;
+}
+
+.modal-body form .control-label {
+  width: 45px;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.modal-body .form-inline input,
+.modal-body .form-inline select {
+  margin-right: 12px;
+}

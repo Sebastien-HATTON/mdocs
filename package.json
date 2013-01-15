@@ -1,0 +1,40 @@
+{
+  "name": "markdonio",
+  "version": "0.0.0",
+  "description": "A realtime collaborative markdown editor for the people.",
+  "main": "server.js",
+  "scripts": {
+    "test": "DB=mongodb://localhost/markdio-test mocha test --require should",
+    "postinstall": "make build"
+  },
+  "repository": "",
+  "author": "José F. Romaniello <jfromaniello@gmail.com> (http://joseoncode.com)",
+  "license": "MIT",
+  "dependencies": {
+    "passport": "~0.1.15",
+    "express": "~3.0.6",
+    "share": "git+https://github.com/josephg/ShareJS.git",
+    "jade": "~0.28.1",
+    "passport-google": "~0.2.0",
+    "mongodb": "~1.2.8",
+    "connect-mongodb": "~1.1.5",
+    "bower": "~0.6.8",
+    "node-markdown": "~0.1.1",
+    "passport-sharejs": "0.0.2",
+    "xtend": "~1.0.3",
+    "json5": "~0.1.0",
+    "requirejs": "~2.1.2",
+    "rimraf": "~2.1.1",
+    "async": "~0.1.22",
+    "moment": "~1.7.2",
+    "jade-amd": "git+https://github.com/jfromaniello/node-jade-amd.git"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "devDependencies": {
+    "should": "~1.2.1",
+    "mocha": "~1.8.1"
+  }
+}

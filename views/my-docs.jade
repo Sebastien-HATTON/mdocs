@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  table.table
+    thead
+      tr
+        th Name
+        th Last access
+        th
+    tbody
+      each doc in docs
+        tr
+          th= doc.name || 'untitled'
+          th= moment(doc.lastAccess).fromNow()
+          th
+            a.btn(href='/view/' + doc._id.toString()) view
+            if doc.canEdit
+              a.btn(href='/edit/' + doc._id.toString()) edit
+            else
+              a.btn(href='#') request permissions
+
+block scripts
+  script(src="components/require/require.js")
+  script(src="js/require.config.js")
+
+  script(type="text/javascript")
+    require(["js/index.js"], function(index){});
