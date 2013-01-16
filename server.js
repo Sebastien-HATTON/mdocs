@@ -24,6 +24,11 @@ var sessionOptions = {
         username: connectionData.user,
         password: connectionData.password,
         collection: 'sessions'
+      }, function (err) {
+        if (err){
+          return console.log('Error connecting MongoStore', err);
+        }
+        console.log('connected mongostore');
       })
   };
 
