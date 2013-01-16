@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "DB=mongodb://localhost/markdio-test mocha test --require should",
-    "postinstall": "make build"
+    "postinstall": "node tasks/build"
   },
   "repository": "",
   "author": "José F. Romaniello <jfromaniello@gmail.com> (http://joseoncode.com)",
@@ -13,7 +13,8 @@
   "dependencies": {
     "passport": "~0.1.15",
     "express": "~3.0.6",
-    "share": "git+https://github.com/josephg/ShareJS.git",
+    "browserchannel": "https://github.com/jfromaniello/node-browserchannel/tarball/patch-1",
+    "share": "https://github.com/josephg/ShareJS/tarball/master",
     "jade": "~0.28.1",
     "passport-google": "~0.2.0",
     "mongodb": "~1.2.8",
@@ -27,7 +28,7 @@
     "rimraf": "~2.1.1",
     "async": "~0.1.22",
     "moment": "~1.7.2",
-    "jade-amd": "git+https://github.com/jfromaniello/node-jade-amd.git"
+    "jade-amd": "https://github.com/jfromaniello/node-jade-amd/tarball/master"
   },
   "engines": {
     "node": "0.8.x",
