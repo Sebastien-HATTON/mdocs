@@ -16,7 +16,6 @@
     "browserchannel": "https://github.com/jfromaniello/node-browserchannel/tarball/patch-1",
     "share": "https://github.com/josephg/ShareJS/tarball/master",
     "jade": "~0.28.1",
-    "passport-google": "~0.2.0",
     "mongodb": "~1.2.8",
     "connect-mongodb": "~1.1.5",
     "bower": "~0.6.8",
@@ -28,7 +27,8 @@
     "rimraf": "~2.1.1",
     "async": "~0.1.22",
     "moment": "~1.7.2",
-    "jade-amd": "https://github.com/jfromaniello/node-jade-amd/tarball/master"
+    "jade-amd": "https://github.com/jfromaniello/node-jade-amd/tarball/master",
+    "passport-auth0": "0.0.5"
   },
   "engines": {
     "node": "0.8.x",
