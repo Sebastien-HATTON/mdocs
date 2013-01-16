@@ -13,6 +13,7 @@
     "jKey": "https://github.com/OscarGodson/jKey.git",
     "jquery.jeditable": "http://www.appelsiini.net/download/jquery.jeditable.js",
     "jam-jade-runtime": "https://github.com/jfromaniello/jam-jade-runtime.git",
-    "Font-Awesome": "https://github.com/FortAwesome/Font-Awesome.git#~3.0.1"
+    "Font-Awesome": "https://github.com/FortAwesome/Font-Awesome.git#~3.0.1",
+    "ZeroClipboard": "https://github.com/jonrohan/ZeroClipboard/archive/master.zip"
   }
 }

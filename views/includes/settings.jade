@@ -6,10 +6,14 @@
       .control-group
         label.control-label(for='doc-url') URL
         .controls
-          input.input-xxlarge#doc-url(type='text', 
+          .input-append
+            input.input-xxlarge#doc-url(type='text', 
                                       value=baseUrl + '/doc/' + doc._id.toString(), 
-                                      style='width: 440px'
+                                      style='width: 369px'
                                       readonly)
+            button#copy-url.btn(type='button', 
+                                data-clipboard-target='doc-url')
+              i.icon-copy
 
     h4 Collaborators
     table#collabs-table.table.permissions-table

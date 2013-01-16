@@ -1,11 +1,27 @@
 define(function (require) {
   var $ = require('jquery');
   var request = require('reqwest');
-  var settingsPopup = $('#settings-popup');
+  // var settingsPopup = $('#settings-popup');
   var collabTemplate = require('js/templates/collaborator-row');
 
   require('jeditable');
   
+  var ZeroClipboard = require('zeroclipb');
+
+  new ZeroClipboard($("#copy-url"), {
+    moviePath: "/components/ZeroClipboard/ZeroClipboard.swf"
+  }).on('complete', function() {
+    var btn = $(this);
+    btn.tooltip({
+      title:     'copied!',
+      placement: 'bottom',
+      trigger:   'manual'
+    }).tooltip('show');
+    setTimeout(function(){
+      btn.tooltip('hide');
+    }, 1000);
+  });
+
   $('#doc-url, #doc-url-viewer').click(function(){
     this.select();
   });

@@ -13,7 +13,8 @@ require.config({
     "bootstrap":  "components/bootstrap/docs/assets/js/bootstrap",
     "share":      "sharejs/share",
     "share-ace":  "sharejs/share-ace",
-    "bcsocket":   "sharejs/bcsocket"
+    "bcsocket":   "sharejs/bcsocket",
+    "zeroclipb":  "components/ZeroClipboard/ZeroClipboard"
   },
   "shim": {
     "bootstrap": ["jquery"],
@@ -22,6 +23,9 @@ require.config({
     "share": {
       deps: ["jquery", "bcsocket"],
       exports: "sharejs"
+    },
+    "zeroclipb": {
+      exports: 'ZeroClipboard'
     },
     "share-ace": ["share", 'ace/ace', 'ace/range']
   }
