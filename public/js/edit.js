@@ -12,7 +12,7 @@ define(function(require){
   require('js/edit-components/settings-sharing');
   require('js/edit-components/title-changer');
 
-  sharejs.open(window.docId, 'text', { authentication: '1234' }, function(error, doc) {
+  sharejs.open(window.docId, 'text', function(error, doc) {
 
     editor.bindAceDocument(doc);    
 
