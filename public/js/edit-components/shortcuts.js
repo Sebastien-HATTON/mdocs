@@ -7,7 +7,7 @@ define(function(require){
     modifier = 'option';
   }
 
-  $(document).jkey(modifier + '+h', function() {
+  $(document).jkey(modifier + '+/', function() {
     $('#key-shortcuts-help').modal({
       keyboard: true,
       show: true
@@ -18,7 +18,7 @@ define(function(require){
     $('#settings-popup').modal();
   });
 
-  $(document).jkey(modifier + '+e', function(){
+  $(document).jkey(modifier + '+w', function(){
     $('#editor').toggle();
     $('#preview').toggle();
   });
