@@ -4,7 +4,7 @@ define(function (require) {
 
   require('jeditable');
 
-  $('h1#name').editable('/doc/' + window.docId + '/title', {
+  $('#name').editable('/doc/' + window.docId + '/title', {
     'cssclass': 'input-title'
   });
 

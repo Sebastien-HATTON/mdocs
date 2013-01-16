@@ -1,23 +1,18 @@
 extends layout
 
 block content
-  table.table
+  table.table.mydocs-table
     thead
       tr
         th Name
         th Last access
-        th
     tbody
       each doc in docs
         tr
-          th= doc.name || 'untitled'
-          th= moment(doc.lastAccess).fromNow()
           th
-            a.btn(href='/view/' + doc._id.toString()) view
-            if doc.canEdit
-              a.btn(href='/edit/' + doc._id.toString()) edit
-            else
-              a.btn(href='#') request permissions
+            a(href=(doc.canEdit ? '/edit/' : '/view/') + doc._id.toString())= doc.name || 'untitled'
+          th= moment(doc.lastAccess).fromNow()
+
 
 block scripts
   script(src="components/require/require.js")

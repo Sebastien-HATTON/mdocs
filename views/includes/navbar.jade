@@ -1,6 +1,9 @@
-mixin menu(menuTitle, url)
+mixin menu(menuTitle, url, tooltip, icon)
   li(class=title.toLowerCase() == menuTitle.toLowerCase() ? "active" : "")
-    a(href=url)= menuTitle
+    a(href=url, title=tooltip)
+      if icon
+        i(class=icon)
+      | #{menuTitle}
 
 .navbar.navbar-inverse.navbar-fixed-top
   .navbar-inner
@@ -13,16 +16,15 @@ mixin menu(menuTitle, url)
       
       div.nav-collapse
         ul.nav
-          +menu('Home', '/')
+          +menu('New', '/new', 'create a new document', 'icon-file')
+          +menu('My docs', '/my-docs', 'open list of documents', 'icon-folder-open')
           
           block menu-extras
           
-          +menu('New', '/new')
-          +menu('My docs', '/my-docs')
         
       if !user
         a.sign-in.btn.btn-primary.pull-right(href="/login") 
-          i.icon-user
+          i.icon-signin
           |  login
       else
         div.dropdown.pull-right
@@ -30,11 +32,7 @@ mixin menu(menuTitle, url)
             | #{user.displayName} 
             span.caret
           ul.dropdown-menu(role="menu", aria-labelledby="dLabel")
-            //- li
-            //-   a(href="/settings")
-            //-     b #{user.email}
-            //-     br
-            //-     small Configuración
-            //- li.divider
             li 
-              a(href="/logout") sign out
+              a(href="/logout")
+                span.icon-signout
+                | sign out

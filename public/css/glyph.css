@@ -1,0 +1,1624 @@
+
+
+[class^="glyph-"], [class*=" glyph-"] {
+    display: inline-block;
+    *margin-right: .3em;
+    line- vertical-align: text-top;
+    background-image: url("../img/glyphicons.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+}
+ 
+[class^="glyph-"]:last-child, [class*=" glyph-"]:last-child {
+    *margin-left: 0;
+}
+
+.glyph-white{
+    background-image: url("../img/glyphicons-white.png");
+}
+
+.nav-list [class^="glyph-"] {
+    margin-right: 2px;
+}
+ 
+.glyph-4square {
+    background-position: 0 0;
+}
+ 
+.glyph-adjust-circle {
+    background-position: 0 -62px;
+}
+ 
+.glyph-adjust {
+    background-position: 0 -125px;
+}
+ 
+.glyph-adress-book {
+    background-position: 0 -187px;
+}
+ 
+.glyph-airplane {
+    background-position: 0 -249px;
+}
+ 
+.glyph-alarm {
+    background-position: 0 -312px;
+}
+ 
+.glyph-albums {
+    background-position: 0 -375px;
+}
+ 
+.glyph-align-center {
+    background-position: 0 -434px;
+}
+ 
+.glyph-align-left {
+    background-position: 0 -495px;
+}
+ 
+.glyph-align-right {
+    background-position: 0 -556px;
+}
+ 
+.glyph-amazon {
+    background-position: 0 -617px;
+}
+ 
+.glyph-anchor {
+    background-position: 0 -679px;
+}
+ 
+.glyph-announcement {
+    background-position: 0 -742px;
+}
+ 
+.glyph-asterisk {
+    background-position: 0 -802px;
+}
+ 
+.glyph-attach {
+    background-position: 0 -862px;
+}
+ 
+.glyph-ax {
+    background-position: 0 -924px;
+}
+ 
+.glyph-ban {
+    background-position: 0 -987px;
+}
+ 
+.glyph-bank {
+    background-position: 0 -1050px;
+}
+ 
+.glyph-barcode {
+    background-position: 0 -1112px;
+}
+ 
+.glyph-baseball {
+    background-position: 0 -1174px;
+}
+ 
+.glyph-beach-umbrella {
+    background-position: 0 -1237px;
+}
+ 
+.glyph-beer {
+    background-position: 0 -1300px;
+}
+ 
+.glyph-behance {
+    background-position: 0 -1362px;
+}
+ 
+.glyph-bell {
+    background-position: 0 -1424px;
+}
+ 
+.glyph-bin {
+    background-position: 0 -1486px;
+}
+ 
+.glyph-binoculars {
+    background-position: 0 -1550px;
+}
+ 
+.glyph-birthday-cake {
+    background-position: 0 -1612px;
+}
+ 
+.glyph-blog {
+    background-position: 0 -1677px;
+}
+ 
+.glyph-blogger {
+    background-position: 0 -1739px;
+}
+ 
+.glyph-bluetooth {
+    background-position: 0 -1801px;
+}
+ 
+.glyph-boat {
+    background-position: 0 -1863px;
+}
+ 
+.glyph-bold {
+    background-position: 0 -1925px;
+}
+ 
+.glyph-bomb {
+    background-position: -64px 0;
+}
+ 
+.glyph-book-open {
+    background-position: -64px -63px;
+}
+ 
+.glyph-book {
+    background-position: -64px -125px;
+}
+ 
+.glyph-bookmark {
+    background-position: -64px -187px;
+}
+ 
+.glyph-bowling {
+    background-position: -64px -249px;
+}
+ 
+.glyph-bp {
+    background-position: -64px -311px;
+}
+ 
+.glyph-briefcase {
+    background-position: -64px -373px;
+}
+ 
+.glyph-brightness-increase {
+    background-position: -64px -434px;
+}
+ 
+.glyph-brightness-reduce {
+    background-position: -64px -496px;
+}
+ 
+.glyph-brush {
+    background-position: -64px -556px;
+}
+ 
+.glyph-bullets {
+    background-position: -64px -618px;
+}
+ 
+.glyph-buoy {
+    background-position: -64px -680px;
+}
+ 
+.glyph-bus {
+    background-position: -64px -742px;
+}
+ 
+.glyph-buzz {
+    background-position: -64px -805px;
+}
+ 
+.glyph-cake {
+    background-position: -64px -867px;
+}
+ 
+.glyph-calculator {
+    background-position: -64px -929px;
+}
+ 
+.glyph-calendar {
+    background-position: -64px -991px;
+}
+ 
+.glyph-camera-small {
+    background-position: -64px -1054px;
+}
+ 
+.glyph-camera {
+    background-position: -64px -1116px;
+}
+ 
+.glyph-candle {
+    background-position: -64px -1176px;
+}
+ 
+.glyph-car {
+    background-position: -64px -1239px;
+}
+ 
+.glyph-cardio {
+    background-position: -64px -1300px;
+}
+ 
+.glyph-cargo {
+    background-position: -64px -1363px;
+}
+ 
+.glyph-cars {
+    background-position: -64px -1426px;
+}
+ 
+.glyph-cart-in {
+    background-position: -64px -1489px;
+}
+ 
+.glyph-cart-out {
+    background-position: -64px -1551px;
+}
+ 
+.glyph-celebration {
+    background-position: -64px -1614px;
+}
+ 
+.glyph-certificate {
+    background-position: -64px -1677px;
+}
+ 
+.glyph-charts {
+    background-position: -64px -1740px;
+}
+ 
+.glyph-chat {
+    background-position: -64px -1802px;
+}
+ 
+.glyph-check {
+    background-position: -64px -1862px;
+}
+ 
+.glyph-circle-arrow-down {
+    background-position: -64px -1921px;
+}
+ 
+.glyph-circle-arrow-left {
+    background-position: -132px 0;
+}
+ 
+.glyph-circle-arrow-right {
+    background-position: -132px -63px;
+}
+ 
+.glyph-circle-arrow-top {
+    background-position: -132px -126px;
+}
+ 
+.glyph-circle-exclamation-mark {
+    background-position: -132px -189px;
+}
+ 
+.glyph-circle-info {
+    background-position: -132px -252px;
+}
+ 
+.glyph-circle-minus {
+    background-position: -132px -315px;
+}
+ 
+.glyph-circle-ok {
+    background-position: -132px -378px;
+}
+ 
+.glyph-circle-plus {
+    background-position: -132px -441px;
+}
+ 
+.glyph-circle-question-mark {
+    background-position: -132px -504px;
+}
+ 
+.glyph-circle-remove {
+    background-position: -132px -567px;
+}
+ 
+.glyph-cleaning {
+    background-position: -132px -630px;
+}
+ 
+.glyph-clock {
+    background-position: -132px -693px;
+}
+ 
+.glyph-cloud {
+    background-position: -132px -755px;
+}
+ 
+.glyph-coffe-cup {
+    background-position: -132px -814px;
+}
+ 
+.glyph-cogwheel {
+    background-position: -132px -874px;
+}
+ 
+.glyph-cogwheels {
+    background-position: -132px -936px;
+}
+ 
+.glyph-comments {
+    background-position: -132px -999px;
+}
+ 
+.glyph-compass {
+    background-position: -132px -1061px;
+}
+ 
+.glyph-computer-locked {
+    background-position: -132px -1123px;
+}
+ 
+.glyph-computer-proces {
+    background-position: -132px -1185px;
+}
+ 
+.glyph-computer-service {
+    background-position: -132px -1247px;
+}
+ 
+.glyph-conversation {
+    background-position: -132px -1309px;
+}
+ 
+.glyph-credit-card {
+    background-position: -132px -1368px;
+}
+ 
+.glyph-credit {
+    background-position: -132px -1428px;
+}
+ 
+.glyph-crop {
+    background-position: -132px -1490px;
+}
+ 
+.glyph-cup {
+    background-position: -132px -1553px;
+}
+ 
+.glyph-cutlery {
+    background-position: -132px -1615px;
+}
+ 
+.glyph-dashboard {
+    background-position: -132px -1677px;
+}
+ 
+.glyph-database-ban {
+    background-position: -132px -1739px;
+}
+ 
+.glyph-database-lock {
+    background-position: -132px -1803px;
+}
+ 
+.glyph-database-minus {
+    background-position: -132px -1867px;
+}
+ 
+.glyph-database-plus {
+    background-position: -132px -1931px;
+}
+ 
+.glyph-delete-point {
+    background-position: -200px 0;
+}
+ 
+.glyph-deviantart {
+    background-position: -200px -59px;
+}
+ 
+.glyph-direction {
+    background-position: -200px -121px;
+}
+ 
+.glyph-dislikes {
+    background-position: -200px -184px;
+}
+ 
+.glyph-display {
+    background-position: -200px -246px;
+}
+ 
+.glyph-divide {
+    background-position: -200px -308px;
+}
+ 
+.glyph-dog {
+    background-position: -200px -366px;
+}
+ 
+.glyph-down-arrow {
+    background-position: -200px -429px;
+}
+ 
+.glyph-download-alt {
+    background-position: -200px -489px;
+}
+ 
+.glyph-download {
+    background-position: -200px -551px;
+}
+ 
+.glyph-dribbble {
+    background-position: -200px -614px;
+}
+ 
+.glyph-drink {
+    background-position: -200px -676px;
+}
+ 
+.glyph-dropbox {
+    background-position: -200px -738px;
+}
+ 
+.glyph-dumbbell {
+    background-position: -200px -800px;
+}
+ 
+.glyph-e-mail {
+    background-position: -200px -858px;
+}
+ 
+.glyph-ear-plugs {
+    background-position: -200px -920px;
+}
+ 
+.glyph-edit {
+    background-position: -200px -982px;
+}
+ 
+.glyph-eject {
+    background-position: -200px -1043px;
+}
+ 
+.glyph-electrical-plug {
+    background-position: -200px -1102px;
+}
+ 
+.glyph-electrical-socket-eu {
+    background-position: -200px -1165px;
+}
+ 
+.glyph-electrical-socket-us {
+    background-position: -200px -1227px;
+}
+ 
+.glyph-electricity {
+    background-position: -200px -1289px;
+}
+ 
+.glyph-embed-close {
+    background-position: -200px -1351px;
+}
+ 
+.glyph-embed {
+    background-position: -200px -1413px;
+}
+ 
+.glyph-envelope {
+    background-position: -200px -1470px;
+}
+ 
+.glyph-euro {
+    background-position: -200px -1528px;
+}
+ 
+.glyph-evernote {
+    background-position: -200px -1590px;
+}
+ 
+.glyph-eye-close {
+    background-position: -200px -1652px;
+}
+ 
+.glyph-eye-open {
+    background-position: -200px -1714px;
+}
+ 
+.glyph-fabric {
+    background-position: -200px -1773px;
+}
+ 
+.glyph-facebook {
+    background-position: -200px -1834px;
+}
+ 
+.glyph-facetime-video {
+    background-position: -200px -1896px;
+}
+ 
+.glyph-fast-backward {
+    background-position: -268px 0;
+}
+ 
+.glyph-fast-food {
+    background-position: -268px -59px;
+}
+ 
+.glyph-fast-forward {
+    background-position: -268px -121px;
+}
+ 
+.glyph-female {
+    background-position: -268px -180px;
+}
+ 
+.glyph-file-export {
+    background-position: -268px -244px;
+}
+ 
+.glyph-file-import {
+    background-position: -268px -306px;
+}
+ 
+.glyph-file {
+    background-position: -268px -368px;
+}
+ 
+.glyph-film {
+    background-position: -268px -430px;
+}
+ 
+.glyph-filter {
+    background-position: -268px -493px;
+}
+ 
+.glyph-fins {
+    background-position: -268px -555px;
+}
+ 
+.glyph-fire {
+    background-position: -268px -619px;
+}
+ 
+.glyph-fishes {
+    background-position: -268px -682px;
+}
+ 
+.glyph-flag {
+    background-position: -268px -747px;
+}
+ 
+.glyph-flash {
+    background-position: -268px -810px;
+}
+ 
+.glyph-flickr {
+    background-position: -268px -873px;
+}
+ 
+.glyph-flower {
+    background-position: -268px -935px;
+}
+ 
+.glyph-folder-flag {
+    background-position: -268px -998px;
+}
+ 
+.glyph-folder-lock {
+    background-position: -268px -1061px;
+}
+ 
+.glyph-folder-minus {
+    background-position: -268px -1124px;
+}
+ 
+.glyph-folder-new {
+    background-position: -268px -1187px;
+}
+ 
+.glyph-folder-open {
+    background-position: -268px -1249px;
+}
+ 
+.glyph-folder-plus {
+    background-position: -268px -1310px;
+}
+ 
+.glyph-font {
+    background-position: -268px -1373px;
+}
+ 
+.glyph-forrst {
+    background-position: -268px -1435px;
+}
+ 
+.glyph-forward {
+    background-position: -268px -1497px;
+}
+ 
+.glyph-french-press {
+    background-position: -268px -1556px;
+}
+ 
+.glyph-fullscreen {
+    background-position: -268px -1619px;
+}
+ 
+.glyph-gamepad {
+    background-position: -268px -1681px;
+}
+ 
+.glyph-gift {
+    background-position: -268px -1741px;
+}
+ 
+.glyph-girl {
+    background-position: -268px -1804px;
+}
+ 
+.glyph-github {
+    background-position: -268px -1865px;
+}
+ 
+.glyph-glass {
+    background-position: -268px -1927px;
+}
+ 
+.glyph-globe {
+    background-position: -336px 0;
+}
+ 
+.glyph-google-alt {
+    background-position: -336px -62px;
+}
+ 
+.glyph-google-maps {
+    background-position: -336px -124px;
+}
+ 
+.glyph-google-plus {
+    background-position: -336px -186px;
+}
+ 
+.glyph-grater {
+    background-position: -336px -248px;
+}
+ 
+.glyph-group {
+    background-position: -336px -310px;
+}
+ 
+.glyph-hand-down {
+    background-position: -336px -371px;
+}
+ 
+.glyph-hand-left {
+    background-position: -336px -435px;
+}
+ 
+.glyph-hand-right {
+    background-position: -336px -495px;
+}
+ 
+.glyph-hand-up {
+    background-position: -336px -555px;
+}
+ 
+.glyph-hdd {
+    background-position: -336px -618px;
+}
+ 
+.glyph-headphones {
+    background-position: -336px -679px;
+}
+ 
+.glyph-headset {
+    background-position: -336px -741px;
+}
+ 
+.glyph-heart {
+    background-position: -336px -805px;
+}
+ 
+.glyph-heat {
+    background-position: -336px -866px;
+}
+ 
+.glyph-history {
+    background-position: -336px -929px;
+}
+ 
+.glyph-home {
+    background-position: -336px -992px;
+}
+ 
+.glyph-hospital-h {
+    background-position: -336px -1055px;
+}
+ 
+.glyph-hospital {
+    background-position: -336px -1117px;
+}
+ 
+.glyph-imac {
+    background-position: -336px -1179px;
+}
+ 
+.glyph-inbox-in {
+    background-position: -336px -1240px;
+}
+ 
+.glyph-inbox-lock {
+    background-position: -336px -1303px;
+}
+ 
+.glyph-inbox-minus {
+    background-position: -336px -1367px;
+}
+ 
+.glyph-inbox-out {
+    background-position: -336px -1431px;
+}
+ 
+.glyph-inbox-plus {
+    background-position: -336px -1494px;
+}
+ 
+.glyph-inbox {
+    background-position: -336px -1558px;
+}
+ 
+.glyph-instapaper {
+    background-position: -336px -1620px;
+}
+ 
+.glyph-ipad {
+    background-position: -336px -1682px;
+}
+ 
+.glyph-iphone-exchange {
+    background-position: -336px -1746px;
+}
+ 
+.glyph-iphone-shake {
+    background-position: -336px -1808px;
+}
+ 
+.glyph-iphone-transfer {
+    background-position: -336px -1870px;
+}
+ 
+.glyph-iphone {
+    background-position: -336px -1932px;
+}
+ 
+.glyph-ipod-shuffle {
+    background-position: -404px 0;
+}
+ 
+.glyph-ipod {
+    background-position: -404px -57px;
+}
+ 
+.glyph-italic {
+    background-position: -404px -118px;
+}
+ 
+.glyph-jolicloud {
+    background-position: -404px -180px;
+}
+ 
+.glyph-justify {
+    background-position: -404px -242px;
+}
+ 
+.glyph-kettle {
+    background-position: -404px -303px;
+}
+ 
+.glyph-keyboard-wired {
+    background-position: -404px -365px;
+}
+ 
+.glyph-keyboard-wireless {
+    background-position: -404px -428px;
+}
+ 
+.glyph-keynote {
+    background-position: -404px -488px;
+}
+ 
+.glyph-keys {
+    background-position: -404px -553px;
+}
+ 
+.glyph-last-fm {
+    background-position: -404px -616px;
+}
+ 
+.glyph-leaf {
+    background-position: -404px -678px;
+}
+ 
+.glyph-leather {
+    background-position: -404px -741px;
+}
+ 
+.glyph-left-arrow {
+    background-position: -404px -803px;
+}
+ 
+.glyph-left-indent {
+    background-position: -404px -862px;
+}
+ 
+.glyph-lightbulb {
+    background-position: -404px -923px;
+}
+ 
+.glyph-link {
+    background-position: -404px -986px;
+}
+ 
+.glyph-linked-in {
+    background-position: -404px -1048px;
+}
+ 
+.glyph-list {
+    background-position: -404px -1110px;
+}
+ 
+.glyph-lock {
+    background-position: -404px -1171px;
+}
+ 
+.glyph-log-book {
+    background-position: -404px -1234px;
+}
+ 
+.glyph-luggage {
+    background-position: -404px -1296px;
+}
+ 
+.glyph-macbook {
+    background-position: -404px -1360px;
+}
+ 
+.glyph-magic {
+    background-position: -404px -1418px;
+}
+ 
+.glyph-magnet {
+    background-position: -404px -1480px;
+}
+ 
+.glyph-male {
+    background-position: -404px -1542px;
+}
+ 
+.glyph-message-ban {
+    background-position: -404px -1603px;
+}
+ 
+.glyph-message-empty {
+    background-position: -404px -1665px;
+}
+ 
+.glyph-message-flag {
+    background-position: -404px -1729px;
+}
+ 
+.glyph-message-full {
+    background-position: -404px -1791px;
+}
+ 
+.glyph-message-in {
+    background-position: -404px -1855px;
+}
+ 
+.glyph-message-lock {
+    background-position: -404px -1919px;
+}
+ 
+.glyph-message-minus {
+    background-position: -472px 0;
+}
+ 
+.glyph-message-new {
+    background-position: -472px -62px;
+}
+ 
+.glyph-message-out {
+    background-position: -472px -123px;
+}
+ 
+.glyph-message-plus {
+    background-position: -472px -187px;
+}
+ 
+.glyph-microphone {
+    background-position: -472px -249px;
+}
+ 
+.glyph-moon {
+    background-position: -472px -311px;
+}
+ 
+.glyph-more-items {
+    background-position: -472px -374px;
+}
+ 
+.glyph-more-windows {
+    background-position: -472px -436px;
+}
+ 
+.glyph-more {
+    background-position: -472px -498px;
+}
+ 
+.glyph-move {
+    background-position: -472px -552px;
+}
+ 
+.glyph-music {
+    background-position: -472px -614px;
+}
+ 
+.glyph-mute {
+    background-position: -472px -677px;
+}
+ 
+.glyph-nameplate-alt {
+    background-position: -472px -735px;
+}
+ 
+.glyph-nameplate {
+    background-position: -472px -796px;
+}
+ 
+.glyph-new-window {
+    background-position: -472px -857px;
+}
+ 
+.glyph-note {
+    background-position: -472px -918px;
+}
+ 
+.glyph-notes-2 {
+    background-position: -472px -981px;
+}
+ 
+.glyph-notes {
+    background-position: -472px -1045px;
+}
+ 
+.glyph-ok-2 {
+    background-position: -472px -1108px;
+}
+ 
+.glyph-ok {
+    background-position: -472px -1168px;
+}
+ 
+.glyph-old-man {
+    background-position: -472px -1231px;
+}
+ 
+.glyph-oxygen-bottle {
+    background-position: -472px -1293px;
+}
+ 
+.glyph-pants {
+    background-position: -472px -1357px;
+}
+ 
+.glyph-parents {
+    background-position: -472px -1419px;
+}
+ 
+.glyph-pause {
+    background-position: -472px -1480px;
+}
+ 
+.glyph-pen {
+    background-position: -472px -1538px;
+}
+ 
+.glyph-pencil {
+    background-position: -472px -1600px;
+}
+ 
+.glyph-phone {
+    background-position: -472px -1663px;
+}
+ 
+.glyph-piano {
+    background-position: -472px -1726px;
+}
+ 
+.glyph-picasa {
+    background-position: -472px -1788px;
+}
+ 
+.glyph-picture {
+    background-position: -472px -1850px;
+}
+ 
+.glyph-pie-chart {
+    background-position: -472px -1910px;
+}
+ 
+.glyph-pin-classic {
+    background-position: -540px 0;
+}
+ 
+.glyph-pin-flag {
+    background-position: -540px -62px;
+}
+ 
+.glyph-pin {
+    background-position: -540px -123px;
+}
+ 
+.glyph-pinboard {
+    background-position: -540px -186px;
+}
+ 
+.glyph-pinterest {
+    background-position: -540px -248px;
+}
+ 
+.glyph-pizza {
+    background-position: -540px -310px;
+}
+ 
+.glyph-play-button {
+    background-position: -540px -375px;
+}
+ 
+.glyph-play {
+    background-position: -540px -438px;
+}
+ 
+.glyph-playing-dices {
+    background-position: -540px -497px;
+}
+ 
+.glyph-playlist {
+    background-position: -540px -559px;
+}
+ 
+.glyph-podium {
+    background-position: -540px -621px;
+}
+ 
+.glyph-pool {
+    background-position: -540px -682px;
+}
+ 
+.glyph-pot {
+    background-position: -540px -744px;
+}
+ 
+.glyph-power {
+    background-position: -540px -805px;
+}
+ 
+.glyph-print {
+    background-position: -540px -867px;
+}
+ 
+.glyph-projector {
+    background-position: -540px -929px;
+}
+ 
+.glyph-qrcode {
+    background-position: -540px -992px;
+}
+ 
+.glyph-quora {
+    background-position: -540px -1054px;
+}
+ 
+.glyph-rabbit {
+    background-position: -540px -1116px;
+}
+ 
+.glyph-random {
+    background-position: -540px -1177px;
+}
+ 
+.glyph-read-it-later {
+    background-position: -540px -1237px;
+}
+ 
+.glyph-readability {
+    background-position: -540px -1299px;
+}
+ 
+.glyph-refresh {
+    background-position: -540px -1361px;
+}
+ 
+.glyph-remove-2 {
+    background-position: -540px -1424px;
+}
+ 
+.glyph-remove {
+    background-position: -540px -1483px;
+}
+ 
+.glyph-repeat {
+    background-position: -540px -1546px;
+}
+ 
+.glyph-resize-full {
+    background-position: -540px -1609px;
+}
+ 
+.glyph-resize-small {
+    background-position: -540px -1671px;
+}
+ 
+.glyph-retweet-2 {
+    background-position: -540px -1733px;
+}
+ 
+.glyph-retweet {
+    background-position: -540px -1794px;
+}
+ 
+.glyph-rewind {
+    background-position: -540px -1852px;
+}
+ 
+.glyph-riflescope {
+    background-position: -540px -1911px;
+}
+ 
+.glyph-right-arrow {
+    background-position: -608px 0;
+}
+ 
+.glyph-right-indent {
+    background-position: -608px -59px;
+}
+ 
+.glyph-ring {
+    background-position: -608px -120px;
+}
+ 
+.glyph-road {
+    background-position: -608px -182px;
+}
+ 
+.glyph-rotation-lock {
+    background-position: -608px -244px;
+}
+ 
+.glyph-roundabout {
+    background-position: -608px -306px;
+}
+ 
+.glyph-router {
+    background-position: -608px -370px;
+}
+ 
+.glyph-rss {
+    background-position: -608px -433px;
+}
+ 
+.glyph-rugby {
+    background-position: -608px -495px;
+}
+ 
+.glyph-ruller {
+    background-position: -608px -557px;
+}
+ 
+.glyph-sampler {
+    background-position: -608px -614px;
+}
+ 
+.glyph-scissors {
+    background-position: -608px -675px;
+}
+ 
+.glyph-screenshot {
+    background-position: -608px -739px;
+}
+ 
+.glyph-scuba-diving {
+    background-position: -608px -803px;
+}
+ 
+.glyph-search {
+    background-position: -608px -865px;
+}
+ 
+.glyph-settings {
+    background-position: -608px -927px;
+}
+ 
+.glyph-share-link {
+    background-position: -608px -989px;
+}
+ 
+.glyph-share {
+    background-position: -608px -1050px;
+}
+ 
+.glyph-sheriffs--star {
+    background-position: -608px -1109px;
+}
+ 
+.glyph-shield {
+    background-position: -608px -1172px;
+}
+ 
+.glyph-shopping-bag {
+    background-position: -608px -1234px;
+}
+ 
+.glyph-shopping-cart {
+    background-position: -608px -1297px;
+}
+ 
+.glyph-show-big-thumbnails {
+    background-position: -608px -1359px;
+}
+ 
+.glyph-show-lines {
+    background-position: -608px -1420px;
+}
+ 
+.glyph-show-thumbnails-with-lines {
+    background-position: -608px -1478px;
+}
+ 
+.glyph-show-thumbnails {
+    background-position: -608px -1536px;
+}
+ 
+.glyph-signal-wifi {
+    background-position: -608px -1597px;
+}
+ 
+.glyph-signal {
+    background-position: -608px -1659px;
+}
+ 
+.glyph-skitch {
+    background-position: -608px -1721px;
+}
+ 
+.glyph-skull {
+    background-position: -608px -1783px;
+}
+ 
+.glyph-skype {
+    background-position: -608px -1845px;
+}
+ 
+.glyph-snorkel-diving {
+    background-position: -608px -1907px;
+}
+ 
+.glyph-snowflake {
+    background-position: -676px 0;
+}
+ 
+.glyph-sort {
+    background-position: -676px -64px;
+}
+ 
+.glyph-spade {
+    background-position: -676px -127px;
+}
+ 
+.glyph-spootify {
+    background-position: -676px -189px;
+}
+ 
+.glyph-star {
+    background-position: -676px -251px;
+}
+ 
+.glyph-stats {
+    background-position: -676px -313px;
+}
+ 
+.glyph-step-backward {
+    background-position: -676px -376px;
+}
+ 
+.glyph-step-forward {
+    background-position: -676px -435px;
+}
+ 
+.glyph-stop {
+    background-position: -676px -494px;
+}
+ 
+.glyph-stopwatch {
+    background-position: -676px -551px;
+}
+ 
+.glyph-stroller {
+    background-position: -676px -615px;
+}
+ 
+.glyph-stumbleupon {
+    background-position: -676px -678px;
+}
+ 
+.glyph-suitcase {
+    background-position: -676px -740px;
+}
+ 
+.glyph-sun {
+    background-position: -676px -801px;
+}
+ 
+.glyph-sweater {
+    background-position: -676px -863px;
+}
+ 
+.glyph-t-shirt {
+    background-position: -676px -925px;
+}
+ 
+.glyph-table-tennis {
+    background-position: -676px -987px;
+}
+ 
+.glyph-table {
+    background-position: -676px -1049px;
+}
+ 
+.glyph-tablet {
+    background-position: -676px -1111px;
+}
+ 
+.glyph-tag {
+    background-position: -676px -1174px;
+}
+ 
+.glyph-tags {
+    background-position: -676px -1236px;
+}
+ 
+.glyph-tea-kettle {
+    background-position: -676px -1298px;
+}
+ 
+.glyph-temple-buddhist {
+    background-position: -676px -1360px;
+}
+ 
+.glyph-temple-christianity-church {
+    background-position: -676px -1421px;
+}
+ 
+.glyph-temple-hindu {
+    background-position: -676px -1484px;
+}
+ 
+.glyph-temple-islam {
+    background-position: -676px -1546px;
+}
+ 
+.glyph-text-bigger {
+    background-position: -676px -1608px;
+}
+ 
+.glyph-text-height {
+    background-position: -676px -1669px;
+}
+ 
+.glyph-text-resize {
+    background-position: -676px -1731px;
+}
+ 
+.glyph-text-smaller {
+    background-position: -676px -1794px;
+}
+ 
+.glyph-text-strike {
+    background-position: -676px -1852px;
+}
+ 
+.glyph-text-underline {
+    background-position: -676px -1913px;
+}
+ 
+.glyph-text-width {
+    background-position: -744px 0;
+}
+ 
+.glyph-thin-arrow-left {
+    background-position: -744px -62px;
+}
+ 
+.glyph-thin-right-arrow {
+    background-position: -744px -123px;
+}
+ 
+.glyph-thumbs-down {
+    background-position: -744px -184px;
+}
+ 
+.glyph-thumbs-up {
+    background-position: -744px -245px;
+}
+ 
+.glyph-tie {
+    background-position: -744px -306px;
+}
+ 
+.glyph-tint {
+    background-position: -744px -369px;
+}
+ 
+.glyph-train {
+    background-position: -744px -432px;
+}
+ 
+.glyph-tree-conifer {
+    background-position: -744px -496px;
+}
+ 
+.glyph-tree-deciduous {
+    background-position: -744px -558px;
+}
+ 
+.glyph-truck {
+    background-position: -744px -621px;
+}
+ 
+.glyph-tumblr {
+    background-position: -744px -685px;
+}
+ 
+.glyph-turtle {
+    background-position: -744px -747px;
+}
+ 
+.glyph-twitter-t {
+    background-position: -744px -805px;
+}
+ 
+.glyph-twitter {
+    background-position: -744px -867px;
+}
+ 
+.glyph-umbrella {
+    background-position: -744px -929px;
+}
+ 
+.glyph-unlock {
+    background-position: -744px -993px;
+}
+ 
+.glyph-unshare {
+    background-position: -744px -1056px;
+}
+ 
+.glyph-up-arrow {
+    background-position: -744px -1115px;
+}
+ 
+.glyph-upload {
+    background-position: -744px -1175px;
+}
+ 
+.glyph-usd {
+    background-position: -744px -1238px;
+}
+ 
+.glyph-user-add {
+    background-position: -744px -1301px;
+}
+ 
+.glyph-user-remove {
+    background-position: -744px -1362px;
+}
+ 
+.glyph-user {
+    background-position: -744px -1423px;
+}
+ 
+.glyph-vases {
+    background-position: -744px -1484px;
+}
+ 
+.glyph-vcard {
+    background-position: -744px -1546px;
+}
+ 
+.glyph-vector-path-all {
+    background-position: -744px -1608px;
+}
+ 
+.glyph-vector-path-circle {
+    background-position: -744px -1670px;
+}
+ 
+.glyph-vector-path-curve {
+    background-position: -744px -1732px;
+}
+ 
+.glyph-vector-path-line {
+    background-position: -744px -1794px;
+}
+ 
+.glyph-vector-path-polygon {
+    background-position: -744px -1856px;
+}
+ 
+.glyph-vector-path-square {
+    background-position: -744px -1919px;
+}
+ 
+.glyph-vimeo {
+    background-position: -812px 0;
+}
+ 
+.glyph-volume-down {
+    background-position: -812px -62px;
+}
+ 
+.glyph-volume-up {
+    background-position: -812px -120px;
+}
+ 
+.glyph-wallet {
+    background-position: -812px -183px;
+}
+ 
+.glyph-warning-sign {
+    background-position: -812px -243px;
+}
+ 
+.glyph-web-browser {
+    background-position: -812px -305px;
+}
+ 
+.glyph-webcam {
+    background-position: -812px -366px;
+}
+ 
+.glyph-wifi-alt {
+    background-position: -812px -428px;
+}
+ 
+.glyph-woman {
+    background-position: -812px -491px;
+}
+ 
+.glyph-wordpress {
+    background-position: -812px -552px;
+}
+ 
+.glyph-xing {
+    background-position: -812px -614px;
+}
+ 
+.glyph-yahoo {
+    background-position: -812px -676px;
+}
+ 
+.glyph-youtube {
+    background-position: -812px -738px;
+}
+ 
+.glyph-zoom-in {
+    background-position: -812px -800px;
+}
+ 
+.glyph-zoom-out {
+    background-position: -812px -863px;
+}
+ 
+.glyph-zootool {
+    background-position: -812px -926px;
+}

@@ -8,7 +8,7 @@ define(function(require){
   }
 
   $(document).jkey(modifier + '+h', function() {
-    $('#key-shortcuts').modal({
+    $('#key-shortcuts-help').modal({
       keyboard: true,
       show: true
     });
