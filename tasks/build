@@ -30,7 +30,7 @@ function optimize(cb) {
       baseUrl: './public',
       out:     './public/js/edit-bundle.js'
     });
-
+  console.log('optimizing');
   requirejs.optimize(config, function (text) {
     console.log(text);
     cb();
@@ -45,12 +45,13 @@ var tasks = [
 ];
 
 if(process.env.NODE_ENV === 'production'){
-  tasks.concat([
-    rimraf.bind(rimraf, "public/js/edit-bundle.js"),
-    rimraf.bind(rimraf, "public/js/templates"),
+  console.log('env is production');
+  
+  tasks = tasks.concat([
     executeCommand('node_modules/.bin/jade-amd --from views/includes --to public/js/templates --jaderuntime jaderuntime'),
     optimize
   ]);
+
 }
 
 async.series(tasks, function(){

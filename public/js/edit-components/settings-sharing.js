@@ -1,4 +1,5 @@
 define(function (require) {
+  var $ = require('jquery');
   var request = require('reqwest');
   var settingsPopup = $('#settings-popup');
   var collabTemplate = require('js/templates/collaborator-row');
