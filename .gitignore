@@ -3,3 +3,4 @@ node_modules/*
 public/js/edit-bundle.js
 public/js/templates/*
 public/components/*
+run.sh
