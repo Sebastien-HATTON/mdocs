@@ -10,13 +10,12 @@ block content
       each doc in docs
         tr
           th
-            a(href=(doc.canEdit ? '/edit/' : '/view/') + doc._id.toString())= doc.name || 'untitled'
+            a(href='/doc/' + doc._id.toString())= doc.name || 'untitled'
           th= moment(doc.lastAccess).fromNow()
 
 
 block scripts
   script(src="components/require/require.js")
   script(src="js/require.config.js")
-
   script(type="text/javascript")
     require(["js/index.js"], function(index){});

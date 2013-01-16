@@ -1,20 +1,13 @@
 #settings-popup.form-horizontal.modal.hide.fade
   .modal-header
-    h3 settings
+    h3 share
   .modal-body
     form.form-horizontal
       .control-group
         label.control-label(for='doc-url') URL
         .controls
           input.input-xxlarge#doc-url(type='text', 
-                                      value=baseUrl + '/edit/' + doc._id.toString(), 
-                                      style='width: 440px'
-                                      readonly)
-      .control-group
-        label.control-label(for='doc-url-viewer') Viewer
-        .controls
-          input.input-xxlarge#doc-url-viewer(type='text', 
-                                      value=baseUrl + '/view/' + doc._id.toString(), 
+                                      value=baseUrl + '/doc/' + doc._id.toString(), 
                                       style='width: 440px'
                                       readonly)
 
