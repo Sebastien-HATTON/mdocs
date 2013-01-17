@@ -23,6 +23,10 @@ define(function(require){
     $('#preview').toggle();
   });
 
+  $(document).jkey(modifier + '+m', function(){
+    window.open('http://daringfireball.net/projects/markdown/syntax', '_blank');
+  });
+
   $(document).jkey('esc', function(){
     $('.modal').modal('hide');
   });
