@@ -1,16 +1,25 @@
 extends layout
 
 block content
-  h1 markd.io
+  //- h1 markd.io
   
-  img(src='/img/markdown.png')
-  br
-  br
-  p 
-    | Hello and welcome to markdio!
-    | the best way to collaborate with 
-    a(href="http://daringfireball.net/projects/markdown/syntax") markdown
-    | .
+  if error && error == 'domain-mismatch'
+    .alert.alert-error
+      button.close(type='button', data-dismiss='alert') ×
+      strong Error! 
+      | You are trying to login with some email but you are already logged with another one.
+
+  else
+
+    .hero-unit
+      h1 mdocs
+      p Hello and welcome to markdio! the best way to collaborate with 
+        a(href="http://daringfireball.net/projects/markdown/syntax") markdown
+        | .
+      img(src='/img/markdown.png')
+
+
+
 
 block scripts
   script(src="components/require/require.js")

@@ -62,9 +62,13 @@ app.configure(function(){
 setupPassport.routes(app);
 
 app.get('/', function (req, res) {
+  var error = (req.session.messages || [])[0];
+  delete req.session.messages;
+
   res.render('index', {
     title:  'Home',
-    user:   req.user
+    user:   req.user,
+    error:  error
   });
 });
 
