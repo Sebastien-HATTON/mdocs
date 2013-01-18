@@ -28,7 +28,7 @@
     "async": "~0.1.22",
     "moment": "~1.7.2",
     "jade-amd": "https://github.com/jfromaniello/node-jade-amd/tarball/master",
-    "passport-auth0": "0.0.10",
+    "passport-auth0": "0.0.11",
     "auth0": "~0.1.2"
   },
   "engines": {
