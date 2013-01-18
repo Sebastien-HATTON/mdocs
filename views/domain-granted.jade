@@ -1,0 +1,20 @@
+extends layout
+
+block content
+ .page-header
+    h1
+      #name markdio
+    
+    p Your company 
+      strong #{domain} 
+      |  has been setup. Please 
+      a(href='/login') login
+      |  now.
+
+block scripts
+  script(src="components/require/require.js")
+  script(src="js/require.config.js")
+
+  script(type="text/javascript")
+    require(["js/index.js"], function(index){
+    });
