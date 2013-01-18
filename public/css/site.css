@@ -116,3 +116,16 @@ body, html {
 .mydocs-table {
   font-size: 20px;
 }
+
+.collabs-table-wrapper {
+  overflow-y: auto; 
+  height:165px;
+}
+
+#settings-popup select.input-small{
+  width: 100px;
+}
+
+#doc-url {
+  width: 373px;
+}

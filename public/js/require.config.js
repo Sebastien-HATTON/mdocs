@@ -14,7 +14,8 @@ require.config({
     "share":      "sharejs/share",
     "share-ace":  "sharejs/share-ace",
     "bcsocket":   "sharejs/bcsocket",
-    "zeroclipb":  "components/ZeroClipboard/ZeroClipboard"
+    "zeroclipb":  "components/ZeroClipboard/ZeroClipboard",
+    "auth0":      "//sdk.auth0.com/auth0.js#client=RjHuZBEHMlSlq1Aac3vX2Fp2Edb8akBw&redirect_uri=http://localhost:8080/callback/"
   },
   "shim": {
     "bootstrap": ["jquery"],

@@ -1,6 +1,17 @@
-tr(data-email=c.email)
+tr(data-email=c.email, class=c.cls)
+  td(style='width: 15px;')
+    i.icon-user
   td= c.email
   td
-    .permissions-dd= c.type
+    .dropdown
+      a.dropdown-toggle.edit-permissions-dd(role='button', data-toggle='dropdown', href='#')
+        | #{c.type} 
+      ul.dropdown-menu(role='menu', aria-labelledby='drop4')
+        li
+          a.can-read-option(tabindex='-1', href='#') can read
+        li
+          a.can-edit-option(tabindex='-1', href='#') can edit
+
   td
-    a.remove-collab.btn.btn-danger(href='#') remove
+    a.btn-mini.remove-collab.btn.btn-danger(href='#')
+      i.icon-remove

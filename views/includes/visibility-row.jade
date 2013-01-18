@@ -1,0 +1,20 @@
+tr(data-level=d.level)
+  td(style='width: 15px;')
+    if d.level == 'public'
+      i.icon-globe
+    else
+      i.icon-building
+  td(style='width: 310px;')= d.title
+    br
+    small= d.legend
+  td
+    .dropdown
+      a.dropdown-toggle.edit-visibility-dd(role='button', data-toggle='dropdown', href='#')
+        | #{d.type} 
+      ul.dropdown-menu(role='menu', aria-labelledby='drop4')
+        li
+          a.can-read-option(tabindex='-1', href='#') can read
+        li
+          a.can-edit-option(tabindex='-1', href='#') can edit
+        li
+          a.can-edit-option(tabindex='-1', href='#') none

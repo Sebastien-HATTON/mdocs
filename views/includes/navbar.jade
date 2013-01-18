@@ -26,11 +26,13 @@ mixin menu(menuTitle, url, tooltip, icon)
         a#sign-in.sign-in.btn.btn-primary.pull-right(href="/login") 
           i.icon-signin
           |  login
-        script(src="https://sdk.auth0.com/auth0.js#client=" + AUTH0_CLIENT_ID + "&redirect_uri=" + BASE_URL + 'callback')
       else
         div.dropdown.pull-right
           a.btn.btn-inverse.dropdown-toggle(href="#", data-toggle="dropdown", role="button") 
-            | #{user.displayName} 
+            if user.identities[0].isSocial
+              | #{user.displayName} 
+            else
+              | #{user.displayName} [at #{user.identities[0].connection}] 
             span.caret
           ul.dropdown-menu(role="menu", aria-labelledby="dLabel")
             li 

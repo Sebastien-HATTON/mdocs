@@ -1,32 +1,39 @@
 #settings-popup.form-horizontal.modal.hide.fade
   .modal-header
     h3 share
-  .modal-body
+  .modal-body(style='max-height: 480px;')
     form.form-horizontal
       .control-group
         label.control-label(for='doc-url') URL
         .controls
           .input-append
             input.input-xxlarge#doc-url(type='text', 
-                                      value=baseUrl + 'doc/' + doc._id.toString(), 
-                                      style='width: 369px'
+                                      value=baseUrl + 'doc/' + doc._id.toString(),
                                       readonly)
             button#copy-url.btn(type='button', 
                                 data-clipboard-target='doc-url')
               i.icon-copy
 
+    table.table.permissions-table
+      - var d = {level: 'public', title: 'Anyone on the web', legend: 'Only the people listed below can access' , type: 'change...'}
+      include visibility-row
+      - var d = {level: 'company', title: 'People at qraftlabs', legend: 'Only the people listed below can access' ,type: 'change...'}
+      include visibility-row
+
     h4 Collaborators
-    table#collabs-table.table.permissions-table
-      for c in (doc.collaborators || [])
-        include collaborator-row
-    
-    h4 Add collaborator
+    .collabs-table-wrapper
+      table#collabs-table.table.permissions-table
+        for c in (doc.collaborators || [])
+          include collaborator-row
+      
+    h4 New collaborator
     form#add-collab.form-inline
       input.input#new-collab(type='text', placeholder='bob@mail.com', name='email')
-      select.input-small#new-collab-type(style='width: 100px;', name='type')
+      select.input-small#new-collab-type(name='type')
         option can edit
         option can view
       button.btn(type='submit') Add
+    
 
   .modal-footer
     button.btn(data-dismiss="modal", aria-hidden="true") Close
