@@ -27,6 +27,7 @@ describe('docs', function () {
             }, function (err, res) {
               if (err) return cb(err);
               test.userId = res[0]._id;
+              test.user1 = res[0];
               cb();
             });
         },
@@ -54,6 +55,7 @@ describe('docs', function () {
             }, function (err, res){
               if(err) return cb(err);
               test.docId = res[0]._id;
+              test.doc1 = res[0];
               cb();
             });
         },
@@ -75,6 +77,7 @@ describe('docs', function () {
             }, function (err, res){
               if(err) return cb(err);
               test.doc2Id = res[0]._id;
+              test.doc2 = res[0]; 
               cb();
             });
         }
@@ -82,132 +85,97 @@ describe('docs', function () {
     });
   });
 
-  describe('get for edit' , function () {
+  describe('getMaxPermission' , function () {
 
-    it('should return the doc when the user is collaborator and "can edit"', function (done) {
-      docs.getForEdit({
+    it('should return "can edit" if user is collaborator and can edit', function () {
+      var user = {
         _id: ObjectID.createPk(),
         emails: [{
           type: 'foo', value: 'foo@bar.com'
         }] 
-      }, test.docId, function (err, doc) {
-        if (err) return done(err);
-        doc.name.should.eql('expenses');
-        done();
-      });
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('can edit');
     });
 
-    it('should return the doc when the user is collaborator (second address)', function (done) {
-      docs.getForEdit({
+    it('should return "can edit" if user is owner', function () {
+      docs.getMaxPermission(test.user1, test.doc1)
+          .should.eql('can edit');
+    });
+
+    it('should return "can view" if user is collaborator and can only view', function () {
+      var user = {
         _id: ObjectID.createPk(),
         emails: [{
-          type: 'foo', value: 'fizz@bar.com'
-        }, {
-          type: 'foo', value: 'foo@bar.com'
+          value: 'baz@bar.com'
         }] 
-      }, test.docId, function (err, doc) {
-        if (err) return done(err);
-        doc.name.should.eql('expenses');
-        done();
-      });
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('can view');
     });
 
-    it('should return error if the user is collaborator but only "can view"', function (done) {
-      docs.getForEdit({
+    it('should return "none" if user is not collaborator nor owner', function () {
+      var user = {
         _id: ObjectID.createPk(),
         emails: [{
-          type: 'foo', value: 'baz@bar.com'
+          value: 'billgates@microsoft.com'
         }] 
-      }, test.docId, function (err) {
-        err.message.should.eql("insufficient permissions to edit");
-        done();
-      });
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('none');
     });
 
-    it('should return the doc when the user belongs to a company that can edit', function (done) {
-      docs.getForEdit({
+    it('should return "can edit" if user belongs to a company that can edit', function () {
+      var user = {
         _id: ObjectID.createPk(),
         emails: [{
-          type: 'foo', value: 'baz@microsoft.com'
+          value: 'billgates@123.com'
         }],
-        identities: [{ connection: 'microsoft'}]
-      }, test.docId, function (err, doc) {
-        if(err) return done(err);
-        doc._id.toString().should.eql(test.docId.toString());
-        done();
-      });
-    });
-  });
-
-  describe('get for view' , function () {
-
-    it('should return the doc when the user is collaborator and "can edit"', function (done) {
-      docs.getForView({
-        _id: ObjectID.createPk(),
-        emails: [{
-          type: 'foo', value: 'foo@bar.com'
-        }] 
-      }, test.docId, function (err, doc) {
-        if (err) return done(err);
-        doc.name.should.eql('expenses');
-        done();
-      });
+        identities: [{
+          isSocial: false,
+          connection: 'microsoft'
+        }]
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('can edit');
     });
 
-    it('should return the doc when the user is collaborator (second address)', function (done) {
-      docs.getForView({
+    it('should return "can view" if user belongs to a company that can only view', function () {
+      var user = {
         _id: ObjectID.createPk(),
         emails: [{
-          type: 'foo', value: 'fizz@bar.com'
-        }, {
-          type: 'foo', value: 'foo@bar.com'
-        }] 
-      }, test.docId, function (err, doc) {
-        if (err) return done(err);
-        doc.name.should.eql('expenses');
-        done();
-      });
-    });
-
-    it('should return error if the user is not collaborator', function (done) {
-      docs.getForView({
-        _id: ObjectID.createPk(),
-        emails: [{
-          type: 'foo', value: 'bandalo@bar.com'
-        }] 
-      }, test.docId, function (err) {
-        err.message.should.eql("insufficient permissions to edit");
-        done();
-      });
-    });
-
-    it('should return the doc when the user belongs to a company that can edit', function (done) {
-      docs.getForView({
-        _id: ObjectID.createPk(),
-        emails: [{
-          type: 'foo', value: 'baz@microsoft.com'
+          value: 'billgates@123.com'
         }],
-        identities: [{ connection: 'microsoft'}]
-      }, test.docId, function (err, doc) {
-        if(err) return done(err);
-        doc._id.toString().should.eql(test.docId.toString());
-        done();
-      });
+        identities: [{
+          isSocial: false,
+          connection: 'kluglabs'
+        }]
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('can view');
     });
 
-    it('should return the doc when the user belongs to a company that can view', function (done) {
-      docs.getForView({
-        _id: ObjectID.createPk(),
-        emails: [{
-          type: 'foo', value: 'baz@microsoft.com'
-        }],
-        identities: [{ connection: 'kluglabs'}]
-      }, test.docId, function (err, doc) {
-        if(err) return done(err);
-        doc._id.toString().should.eql(test.docId.toString());
-        done();
-      });
+    it('should return "can view" if doc public visibility is can view', function () {
+      
+      docs.getMaxPermission(null, {
+        _id: new ObjectID(),
+        visibility: {
+          'public': 'can view'
+        }
+      }).should.eql('can view');
+
     });
+    
+    it('should return "can edit" if doc public visibility is can edit', function () {
+      
+      docs.getMaxPermission(null, {
+        _id: new ObjectID(),
+        visibility: {
+          'public': 'can edit'
+        }
+      }).should.eql('can edit');
+    });
+
   });
 
   describe('get all' , function () {
