@@ -139,30 +139,6 @@ describe('docs', function () {
     });
   });
 
-  
-  describe('user can edit doc', function () {
-    it('should return true for company-wide editable docs', function(){
-       var user = {
-        emails: [],
-        identities: [{
-          connection: 'kluglabs'
-        }]
-       };
-       var doc = {
-        owner: 'faa',
-        collaborators: [],
-        visibility: {
-          companies: {
-            kluglabs: 'can edit'
-          }
-        }
-       };
-       docs.userCanEditDoc(user, doc)
-          .should.be.true;
-    });
-  });
-
-
   describe('get for view' , function () {
 
     it('should return the doc when the user is collaborator and "can edit"', function (done) {

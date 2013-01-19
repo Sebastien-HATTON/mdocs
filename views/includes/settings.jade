@@ -1,7 +1,7 @@
 #settings-popup.form-horizontal.modal.hide.fade
   .modal-header
     h3 share
-  .modal-body(style='max-height: 480px;')
+  .modal-body(style='max-height: 480px; overflow: hidden;')
     form.form-horizontal
       .control-group
         label.control-label(for='doc-url') URL
@@ -14,11 +14,14 @@
                                 data-clipboard-target='doc-url')
               i.icon-copy
 
-    table.table.permissions-table
-      - var d = {level: 'public', title: 'Anyone on the web', legend: 'Only the people listed below can access' , type: 'change...'}
+    table#visibility-table.table.permissions-table
+      - var d = {level: 'public', type: (doc.visibility && doc.visibility.public ? doc.visibility.public : 'none')}
       include visibility-row
-      - var d = {level: 'company', title: 'People at qraftlabs', legend: 'Only the people listed below can access' ,type: 'change...'}
-      include visibility-row
+
+      if !user.identities[0].isSocial
+        - var companyVisibilty = doc.visibility && doc.visibility.companies[user.identities[0].connection];
+        - var d = { level:  'company', company:  user.identities[0].connection, type:   companyVisibilty || 'none'};
+        include visibility-row
 
     h4 Collaborators
     .collabs-table-wrapper

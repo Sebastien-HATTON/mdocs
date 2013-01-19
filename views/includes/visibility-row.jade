@@ -6,15 +6,30 @@ tr(data-level=d.level)
       i.icon-building
   td(style='width: 310px;')= d.title
     br
-    small= d.legend
+    if d.level == 'public'
+      | Anyone on the web
+    else
+      | People at #{d.company}
+    br
+    small
+      if d.type == 'none'
+        | Only the people listed below can access
+      else
+        if d.level == 'public'
+          | Anyone with the link #{d.type}
+        else
+          | Only people at #{d.company} #{d.type}
   td
     .dropdown
       a.dropdown-toggle.edit-visibility-dd(role='button', data-toggle='dropdown', href='#')
-        | #{d.type} 
+        if d.type == 'none'
+          | change... 
+        else
+          | #{d.type} 
       ul.dropdown-menu(role='menu', aria-labelledby='drop4')
         li
-          a.can-view-option(tabindex='-1', href='#') can view
+          a.change-level(tabindex='-1', href='#', data-type='can view') can view
         li
-          a.can-edit-option(tabindex='-1', href='#') can edit
+          a.change-level(tabindex='-1', href='#', data-type='can edit') can edit
         li
-          a.can-edit-option(tabindex='-1', href='#') none
+          a.change-level(tabindex='-1', href='#', data-type='none') none

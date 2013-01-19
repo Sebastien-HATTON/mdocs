@@ -5,6 +5,7 @@ define(function (require) {
   
   // var settingsPopup = $('#settings-popup');
   var collabTemplate = require('js/templates/collaborator-row');
+  var visibilityTmpl = require('js/templates/visibility-row');
 
   require('jeditable');
   
@@ -38,9 +39,9 @@ define(function (require) {
     });
   }
 
-  $('#collabs-table').on('click', '.can-read-option, .can-edit-option', function (e) {
+  $('#collabs-table').on('click', '.can-view-option, .can-edit-option', function (e) {
     e.preventDefault();
-    var type = $(this).hasClass('can-read-option') ? 'can read' : 'can edit';
+    var type = $(this).hasClass('can-view-option') ? 'can view' : 'can edit';
     var row = $(this).parents('tr');
     var email = row.attr('data-email');
     var payload = {
@@ -84,5 +85,37 @@ define(function (require) {
     });
 
     row.remove();
+  });
+
+  $('#visibility-table').on('click', '.change-level', function (e) {
+    e.preventDefault();
+
+    var row = $(this).parents('tr');
+    var visibilityTitle = $('.edit-visibility-dd', row);
+
+    var type = $(this).attr('data-type');
+    var level = row.attr('data-level');
+
+    request({
+      url:          '/doc/' + window.docId + '/visibility',
+      method:       'post',
+      contentType:  'application/json',
+      data:         JSON.stringify({
+        level: level,
+        type:  type
+      }),
+      type:         'json',
+      success: function (r) {
+        var model = {
+          d: {
+            level:   level,
+            company: r.company,
+            type:    type
+          }
+        };
+        row.replaceWith($(visibilityTmpl(model)));
+      }
+    });
+
   });
 });
