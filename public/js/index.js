@@ -1,6 +1,6 @@
 define(function (require) {
   require('bootstrap');
-  require('auth0');
+  var $ = require('jquery');
   var request = require('reqwest');
 
   $('#sign-in, .sign-in').click(function(e){

@@ -23,3 +23,12 @@ html
 
 
   block scripts
+    if env != "production"
+      script(src="/components/require/require.js")
+      script(src="/js/require.config.js")
+    else
+      script(src="/js/index-bundle.js")
+
+    script(type="text/javascript")
+      require(["js/index"], function(index){
+      });

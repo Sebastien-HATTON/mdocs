@@ -22,23 +22,27 @@ function extractConfig(path) {
   return JSON5.parse(config);
 }
 
-function optimize(cb) {
-  var config = xtend(
-    extractConfig('./public/js/require.config.js'), {
-      name:    'components/require/require',
-      include: ['js/edit'],
-      baseUrl: './public',
-      out:     './public/js/edit-bundle.js'
+function optimize (from) {
+  return function (cb) {
+    var config = xtend(
+      extractConfig('./public/js/require.config.js'), {
+        name:    'components/require/require',
+        include: [ 'js/' + from ],
+        baseUrl: './public',
+        out:     './public/js/' + from + '-bundle.js',
+        preserveLicenseComments: false
+      });
+    console.log('optimizing', from);
+    requirejs.optimize(config, function (text) {
+      console.log(text);
+      cb();
+    }, function (err) {
+      console.log(err);
+      process.exit(1);
     });
-  console.log('optimizing');
-  requirejs.optimize(config, function (text) {
-    console.log(text);
-    cb();
-  }, function (err) {
-    console.log(err);
-    process.exit(1);
-  });
+  };
 }
+
 
 var tasks = [
   executeCommand("bower install")
@@ -49,7 +53,8 @@ if(process.env.NODE_ENV === 'production'){
   
   tasks = tasks.concat([
     executeCommand('node_modules/.bin/jade-amd --from views/includes --to public/js/templates --jaderuntime jaderuntime'),
-    optimize
+    optimize('edit'),
+    optimize('index')
   ]);
 
 }

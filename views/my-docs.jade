@@ -13,9 +13,3 @@ block content
             a(href='/doc/' + doc._id.toString())= doc.name || 'untitled'
           th= moment(doc.lastAccess).fromNow()
 
-
-block scripts
-  script(src="components/require/require.js")
-  script(src="js/require.config.js")
-  script(type="text/javascript")
-    require(["js/index.js"], function(index){});
