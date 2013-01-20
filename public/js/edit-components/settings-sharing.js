@@ -120,16 +120,22 @@ define(function (require) {
   });
 
 
+  var users;
   $('#new-collab').typeahead({
     source: function (query, process) {
-      request({
-        url:    '/users',
-        method: 'get',
-        type:   'json',
-        success: function (users) {
-          process(users.map(function(u) { return u.email; }));          
-        }
-      });
+      if(users){
+        process(users);
+      } else {
+        request({
+          url:    '/users',
+          method: 'get',
+          type:   'json',
+          success: function (usrs) {
+            users = usrs.map(function(u) { return u.email; });
+            process(users);
+          }
+        });
+      }
     }
   });
 });
