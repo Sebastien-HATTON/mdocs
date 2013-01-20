@@ -1,4 +1,4 @@
-An opensource markdown-powered collaborative editor inspired in google docs.
+An opensource markdown-powered and collaborative editor inspired in google docs.
 
 This project was created to show [auth0](http://auth0.com) and because we wanted to have something like google docs with markdown support.
 
