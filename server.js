@@ -34,6 +34,14 @@ app.configure(function(){
   this.locals.AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID;
   this.locals.AUTH0_DOMAIN = process.env.AUTH0_DOMAIN;
   this.locals.BASE_URL = process.env.BASE_URL || 'http://localhost:8080/';
+
+  this.requireAuthentication = function (req, res, next){
+    if(!req.user){
+      req.session.returnTo = req.originalUrl;
+      return res.redirect('/login');
+    }
+    next();
+  };
 });
 
 app.get('/', function (req, res) {
@@ -41,7 +49,7 @@ app.get('/', function (req, res) {
   delete req.session.messages;
 
   res.render('index', {
-    title:  'Home',
+    title:  'mdocs',
     user:   req.user,
     error:  error
   });

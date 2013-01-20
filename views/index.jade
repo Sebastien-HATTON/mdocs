@@ -1,8 +1,6 @@
 extends layout
 
 block content
-  //- h1 markd.io
-  
   if error && error == 'domain-mismatch'
     .alert.alert-error
       button.close(type='button', data-dismiss='alert') ×
@@ -13,11 +11,11 @@ block content
 
     .hero-unit
       h1 mdocs
-      p Hello and welcome to markdio! the best way to collaborate with 
+      p the best way to collaborate with 
         a(href="http://daringfireball.net/projects/markdown/syntax") markdown
         | .
       
-      p Markdio can be used by individuals or companies to share documents.
+      p mdocs can be used by individuals or companies to share documents.
       a#create-company.btn.btn-large.btn-success(href="#") register your company
 
 

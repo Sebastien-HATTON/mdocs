@@ -129,3 +129,25 @@ body, html {
 #doc-url {
   width: 373px;
 }
+
+.modal-body {
+    overflow: visible;
+}
+
+.modal-footer {
+    position: relative;
+    z-index: 1;
+}
+
+#collabs-table tr td:nth-child(1) {
+  width: 15px;
+}
+#collabs-table tr td:nth-child(2) {
+  width: 292px;
+}
+#collabs-table tr td:nth-child(3) {
+  width: 86px;
+}
+#collabs-table tr td:nth-child(4) {
+  width: 46px;
+}

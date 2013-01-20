@@ -118,4 +118,18 @@ define(function (require) {
     });
 
   });
+
+
+  $('#new-collab').typeahead({
+    source: function (query, process) {
+      request({
+        url:    '/users',
+        method: 'get',
+        type:   'json',
+        success: function (users) {
+          process(users.map(function(u) { return u.email; }));          
+        }
+      });
+    }
+  });
 });
