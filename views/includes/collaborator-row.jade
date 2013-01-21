@@ -1,6 +1,6 @@
 tr(data-user-id=c.user_id, data-email=c.email, class=c.cls)
-  td(style='width: 40px;')
-    img(src=c.picture)
+  td
+    img(src=c.picture,style='width: 40px;')
   td
     strong= (c.name || c.email)
     br
