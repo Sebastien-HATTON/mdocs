@@ -38,10 +38,12 @@ describe('docs', function () {
               owner: test.userId,
               collaborators: [
                 {
+                  user_id: 'foxbar',
                   email: 'foo@bar.com',
                   type:  'can edit'
                 },
                 {
+                  user_id: 'foooooobar',
                   email: 'baz@bar.com',
                   type:  'can view'
                 }
@@ -66,6 +68,7 @@ describe('docs', function () {
               owner: test.userId,
               collaborators: [
                 {
+                  user_id: 'foooooobar',
                   email: 'foo@bar.com',
                   type:  'can view'
                 },
@@ -103,12 +106,30 @@ describe('docs', function () {
           .should.eql('can edit');
     });
 
+    it('should return "can edit" if user is collaborator (user_id) and can only view', function () {
+      var user = {
+        id: 'foxbar',
+        emails: [] 
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('can edit');
+    });
+
     it('should return "can view" if user is collaborator and can only view', function () {
       var user = {
         _id: ObjectID.createPk(),
         emails: [{
           value: 'baz@bar.com'
         }] 
+      };
+      docs.getMaxPermission(user, test.doc1)
+          .should.eql('can view');
+    });
+
+    it('should return "can view" if user is collaborator (user_id) and can only view', function () {
+      var user = {
+        id: 'foooooobar',
+        emails: [] 
       };
       docs.getMaxPermission(user, test.doc1)
           .should.eql('can view');
@@ -185,6 +206,18 @@ describe('docs', function () {
         emails: [{
           type: 'foo', value: 'foo@bar.com'
         }] 
+      }, function (err, docs) {
+        if(err) return done(err);
+        docs[0].name.should.eql('expenses');
+        docs[1].name.should.eql('expenses 2');
+        done();
+      });
+    });
+
+    it('should return docs user can read or view (user_id)', function (done) {
+      docs.getAll({
+        id: 'foooooobar',
+        emails: []
       }, function (err, docs) {
         if(err) return done(err);
         docs[0].name.should.eql('expenses');
