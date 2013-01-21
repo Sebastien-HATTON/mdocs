@@ -57,6 +57,7 @@ define(function (require) {
       $('#new-collab')
         .removeClass('error')
         .val('')
+        .attr('data-user-id', '')
         .focus();
       emitter.emit('new', collaborator);
     });

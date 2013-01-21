@@ -17,6 +17,25 @@ define(function (require) {
     });
   }
 
+  function loadCollaborators () {
+   request({
+      url:      '/doc/' + window.docId + '/collaborators?t=' + new Date().getTime(),
+      method:   'get',
+      type:     'json',
+      success:  function (cs) {
+        var tbl = $('#collabs-table').html('');
+        cs.forEach(function (c) {
+          $(collabTemplate({c: c}))
+            .appendTo(tbl);
+        });
+      }
+    }); 
+  }
+
+  $('#settings-popup').on('show', function(){
+    loadCollaborators();
+  });
+
   $('#collabs-table').on('click', '.can-view-option, .can-edit-option', function (e) {
     e.preventDefault();
     var type = $(this).hasClass('can-view-option') ? 'can view' : 'can edit';
@@ -48,7 +67,7 @@ define(function (require) {
     row.remove();
   });
 
-  // $parentDiv.scrollTop($parentDiv.scrollTop() + $innerListItem.position().top);
+  // scroll to make the popup visible
   $('#collabs-table').on('click', '.edit-permissions-dd', 'click', function(e){
     e.preventDefault();
     setTimeout(function(){
@@ -59,13 +78,11 @@ define(function (require) {
         duration: 0 
       });
     }.bind(this), 20);
-    // $('.collabs-table-wrapper').scrollTop($('.collabs-table-wrapper').scrollTop() + $(this).position().top);
   });
 
   return {
-    appendNew: function (collaborator) {
-      var newRow = $(collabTemplate({c: collaborator}));
-      $('#collabs-table').append(newRow);
+    appendNew: function () {
+      loadCollaborators();
     }
   };
 

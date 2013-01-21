@@ -1,5 +1,6 @@
 #settings-popup.form-horizontal.modal.hide.fade
   .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
     h3 share
   .modal-body(style='max-height: 480px;')
     form.form-horizontal
@@ -26,13 +27,12 @@
     h4 Collaborators
     .collabs-table-wrapper
       table#collabs-table.table.permissions-table
-        for c in (doc.collaborators || [])
-          include collaborator-row
+        //- for c in (doc.collaborators || [])
+        //-   include collaborator-row
       
-    h4 New collaborator
     form#add-collab.form-inline
-      input.input#new-collab(type='text', placeholder='name or nickname', name='email')
-      select.input-small#new-collab-type(name='type')
+      input.input#new-collab(type='text', placeholder='name, nickname or email')
+      select.input-small#new-collab-type
         option can edit
         option can view
       button.btn(type='submit') Add
