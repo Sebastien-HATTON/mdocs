@@ -10,7 +10,7 @@
             input.input-xxlarge#doc-url(type='text', 
                                       value=baseUrl + 'doc/' + doc._id.toString(),
                                       readonly)
-            button#copy-url.btn(type='button', 
+            button.btn.copy-btn(type='button', 
                                 data-clipboard-target='doc-url')
               i.icon-copy
 
@@ -31,7 +31,7 @@
       
     h4 New collaborator
     form#add-collab.form-inline
-      input.input#new-collab(type='text', placeholder='bob@mail.com', name='email')
+      input.input#new-collab(type='text', placeholder='name or nickname', name='email')
       select.input-small#new-collab-type(name='type')
         option can edit
         option can view

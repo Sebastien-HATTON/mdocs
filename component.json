@@ -11,9 +11,12 @@
     "text": "https://github.com/malsup/blockui.git",
     "showdown": "~0.3.1",
     "jKey": "https://github.com/OscarGodson/jKey.git",
-    "jquery.jeditable": "http://www.appelsiini.net/download/jquery.jeditable.js",
+    "jquery.jeditable": "https://gist.github.com/raw/9aea9385fff316a01d14/003000ed8ea25b957bcf0f677e36614c2ab02b8f/jquery.jeditable.js",
     "jam-jade-runtime": "https://github.com/jfromaniello/jam-jade-runtime.git",
     "Font-Awesome": "https://github.com/FortAwesome/Font-Awesome.git#~3.0.1",
-    "ZeroClipboard": "https://github.com/jonrohan/ZeroClipboard/archive/master.zip"
+    "ZeroClipboard": "https://github.com/jonrohan/ZeroClipboard/archive/master.zip",
+    "jvent": "https://github.com/jfromaniello/jvent/archive/master.zip",
+    "es5-shim": "https://github.com/kriskowal/es5-shim.git#~2.0.5",
+    "jquery-scrollto": "https://github.com/balupton/jquery-scrollto.git#~1.2.1"
   }
 }

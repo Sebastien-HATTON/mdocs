@@ -1,7 +1,12 @@
-tr(data-email=c.email, class=c.cls)
-  td(style='width: 15px;')
-    i.icon-user
-  td= c.email
+tr(data-user-id=c.user_id, data-email=c.email, class=c.cls)
+  td(style='width: 40px;')
+    img(src=c.picture || "//i2.wp.com/ssl.gstatic.com/s2/profiles/images/silhouette80.png")
+  td
+    strong= (c.name || c.email)
+    br
+    if c.name
+      small= c.email
+
   td
     .dropdown
       a.dropdown-toggle.edit-permissions-dd(role='button', data-toggle='dropdown', href='#')

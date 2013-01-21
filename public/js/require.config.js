@@ -5,6 +5,7 @@ require.config({
     "jkey":       "components/jKey/jquery.jkey",
     "jeditable":  "components/jquery.jeditable/index",
     "jaderuntime":"components/jam-jade-runtime/jade.runtime",
+    "scrollto":   "components/jquery-scrollto/scripts/jquery.scrollto",
     "showdown":   "components/showdown/src/showdown",
     "reqwest":    "components/reqwest/reqwest",
     "ace":        "components/ace/lib/ace",
@@ -14,12 +15,14 @@ require.config({
     "share":      "sharejs/share",
     "share-ace":  "sharejs/share-ace",
     "bcsocket":   "sharejs/bcsocket",
-    "zeroclipb":  "components/ZeroClipboard/ZeroClipboard"
+    "zeroclipb":  "components/ZeroClipboard/ZeroClipboard",
+    "Jvent":      "components/jvent/index"
   },
   "shim": {
     "bootstrap": ["jquery"],
     "jkey":      ["jquery"],
     "jeditable": ["jquery"],
+    "scrollto":  ["jquery"],
     "share": {
       deps: ["jquery", "bcsocket"],
       exports: "sharejs"
