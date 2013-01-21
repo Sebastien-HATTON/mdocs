@@ -16,7 +16,8 @@ require.config({
     "share-ace":  "sharejs/share-ace",
     "bcsocket":   "sharejs/bcsocket",
     "zeroclipb":  "components/ZeroClipboard/ZeroClipboard",
-    "Jvent":      "components/jvent/index"
+    "Jvent":      "components/jvent/index",
+    "md5":        "components/JavaScript-MD5/md5"
   },
   "shim": {
     "bootstrap": ["jquery"],

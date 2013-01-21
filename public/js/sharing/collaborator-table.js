@@ -1,5 +1,6 @@
 define(function (require) {
-  var $ = require('jquery');
+  var $       = require('jquery');
+  var md5     = require('md5');
   var request = require('reqwest');
   var collabTemplate = require('js/templates/collaborator-row');
 
@@ -25,6 +26,11 @@ define(function (require) {
       success:  function (cs) {
         var tbl = $('#collabs-table').html('');
         cs.forEach(function (c) {
+          if (!c.picture) {
+            var hash = md5(c.email);
+            c.picture = 'https://www.gravatar.com/avatar/' + hash + '?s=40&d=' +  
+              "https://i2.wp.com/ssl.gstatic.com/s2/profiles/images/silhouette80.png";
+          }
           $(collabTemplate({c: c}))
             .appendTo(tbl);
         });

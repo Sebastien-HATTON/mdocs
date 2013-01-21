@@ -17,6 +17,7 @@
     "ZeroClipboard": "https://github.com/jonrohan/ZeroClipboard/archive/master.zip",
     "jvent": "https://github.com/jfromaniello/jvent/archive/master.zip",
     "es5-shim": "https://github.com/kriskowal/es5-shim.git#~2.0.5",
-    "jquery-scrollto": "https://github.com/balupton/jquery-scrollto.git#~1.2.1"
+    "jquery-scrollto": "https://github.com/balupton/jquery-scrollto.git#~1.2.1",
+    "JavaScript-MD5": "https://github.com/blueimp/JavaScript-MD5.git"
   }
 }
