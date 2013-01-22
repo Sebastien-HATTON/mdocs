@@ -27,7 +27,6 @@ define(function(require){
   require('share-ace');
 
   editor.bindAceDocument = function (doc) {
-    this.getSession().setValue('');
     doc.attach_ace(this);
     this.setReadOnly(false);
     this.focus();
