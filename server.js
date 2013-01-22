@@ -49,9 +49,7 @@ app.get('/', function (req, res) {
   if(!req.user){
     return res.render('landing');
   }
-  res.render('index', {
-    user: req.user
-  });
+  res.redirect('/my-docs');
 });
 
 app.get('/enterprise', function (req, res) {

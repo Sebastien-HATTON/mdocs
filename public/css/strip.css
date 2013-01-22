@@ -1,6 +1,6 @@
 body {	
     padding: 30px 0 0;
-    border-top: 3px solid #D84A38;
+    /*border-top: 3px solid #D84A38;*/
     background:#efefef; 
 	background-image: url("../img/bg.png");	
 }
@@ -41,7 +41,7 @@ a:hover {
 h2 {
     text-align: center;
     font: 400 44px/71px 'Open Sans', sans-serif;  
-    margin: 18px 0;
+    margin: 8px 0;
 }
 
 h2 strong {
@@ -92,7 +92,7 @@ h4 {
 .navbar .brand {
     font-family: 'Merriweather', serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 38px;
     padding: 0;
     margin-left: 0;
 }
@@ -153,7 +153,7 @@ h4 {
 }
 
 .highlight img {
-	margin-bottom: 30px;
+	margin-bottom: 0px;
     text-align:center;
 }
 

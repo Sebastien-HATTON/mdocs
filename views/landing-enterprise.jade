@@ -26,9 +26,9 @@ html
           .container
             a.brand(href='/') mdocs.io
             ul.nav
-              li.active
-                a(href='/') Home 
               li
+                a(href='/') Home 
+              li.active
                 a(href='/enterprise') Enterprise
               li
                 a.sign-in(href='#') Login
@@ -39,10 +39,11 @@ html
           h2
             | securely share
             strong  markdown docs 
+            br
             | within your company
           img#feature-screenshot(src='/img/screen2.png', alt='screenshot')
           p
-            a#create-company.sign-in.big-btn(href='#') Sign Up your Commpany
+            a#create-company.big-btn(href='#') Sign Up your Commpany
       .row
         .offset3.span6
           hr.shadow-line
