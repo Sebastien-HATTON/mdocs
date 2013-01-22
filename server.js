@@ -46,13 +46,8 @@ app.configure(function(){
 });
 
 app.get('/', function (req, res) {
-  var error = (req.session.messages || [])[0];
-  delete req.session.messages;
-
   res.render('index', {
-    title:  'mdocs',
-    user:   req.user,
-    error:  error
+    user: req.user
   });
 });
 

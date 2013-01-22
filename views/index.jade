@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  if error && error == 'domain-mismatch'
+  if typeof error != 'undefined' 
     .alert.alert-error
       button.close(type='button', data-dismiss='alert') ×
       strong Error! 
-      | You are trying to login with some email but you are already logged with another one.
+      | #{error}
 
   else
 
