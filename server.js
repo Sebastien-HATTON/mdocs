@@ -46,9 +46,16 @@ app.configure(function(){
 });
 
 app.get('/', function (req, res) {
+  if(!req.user){
+    return res.render('landing');
+  }
   res.render('index', {
     user: req.user
   });
+});
+
+app.get('/enterprise', function (req, res) {
+  return res.render('landing-enterprise');
 });
 
 require('./lib/routes')(app);
