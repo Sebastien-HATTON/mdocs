@@ -1,4 +1,4 @@
-build: clean
+build:
 	tasks/build
 
 clean:
