@@ -37,16 +37,14 @@ html
       .row
         header.highlight.span12
           h2
-            | securely share
-            strong  markdown docs 
-            br
+            | share 
             | within your company
           img#feature-screenshot(src='/img/screen2.png', alt='screenshot')
           p
             a#create-company.big-btn(href='#') Sign Up Your Company
-      .row
-        .offset3.span6
-          hr.shadow-line
+      //- .row
+      //-   .offset3.span6
+      //-     hr.shadow-line
 
     if env != "production"
       script(src="/components/require/require.js")
