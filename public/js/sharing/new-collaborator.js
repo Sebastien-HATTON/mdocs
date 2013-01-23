@@ -25,14 +25,17 @@ define(function (require) {
       // email:  $('#new-collab').val(),
       type:   $('#new-collab-type').val()
     };
+    var newCollabSelector = $('#new-collab');
 
     var u = users.filter(function (u) {
-      if( !!$('#new-collab').attr('data-user-id') ){
-        return u.data.user_id  === $('#new-collab').attr('data-user-id'); 
+      if( !!newCollabSelector.attr('data-user-id') ){
+        return u.data.user_id  === newCollabSelector.attr('data-user-id'); 
+      } else if (newCollabSelector.attr('data-email')) {
+        return  u.data.email    === newCollabSelector.attr('data-email');
       } else {
-        return u.data.email    === $('#new-collab').val() || 
-               u.data.name     === $('#new-collab').val() ||
-               u.data.nickname === $('#new-collab').val();
+        return  u.data.email    === newCollabSelector.val() || 
+                u.data.name     === newCollabSelector.val() ||
+                u.data.nickname === newCollabSelector.val();
       }
     }).map(function (u) {
       return u.data;
@@ -82,18 +85,25 @@ define(function (require) {
   $('#new-collab').typeahead({
     updater: function () {
       var selectedId = $("li.active div", this.$menu).attr('data-user-id');
+      var selectedEmail = $("li.active div", this.$menu).attr('data-email');
+
       $('#new-collab').attr('data-user-id', selectedId);
+      $('#new-collab').attr('data-email', selectedEmail);
+
       var r = users.filter(function (u) {
-        return u.data.user_id == selectedId;
+        return (selectedId && u.data.user_id == selectedId) ||
+               (selectedEmail && u.data.email == selectedEmail);
       })[0];
-      return r.data.name;
+      return r.data.name || r.data.email;
     },
     highlighter: function(item) {
       return collabAutocompleteItemTmpl({i: item});
     },
     source: function () {
       return users;
-    }
+    },
+    items: 4,
+    minLength: 2
   });
 
   return emitter;

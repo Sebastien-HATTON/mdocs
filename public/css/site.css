@@ -169,9 +169,10 @@ body, html {
 }
 
 #add-collab .typeahead a img{
-  float:left; 
-  width: 39px;
-  padding-top: 2px;
+  float:       left; 
+  width:       39px;
+  height:      39px;
+  padding-top:  2px;
 }
 
 input.error {

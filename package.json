@@ -29,7 +29,9 @@
     "moment": "~1.7.2",
     "jade-amd": "https://github.com/jfromaniello/node-jade-amd/tarball/master",
     "passport-auth0": "0.0.11",
-    "auth0": "~0.1.2"
+    "auth0": "~0.1.2",
+    "request": "~2.12.0",
+    "gravatar": "~1.0.6"
   },
   "engines": {
     "node": "0.8.x",
