@@ -22,7 +22,7 @@ app.configure(function(){
   this.use('/js/templates/', jadeAmd.jadeAmdMiddleware({
     views:       'views/includes',
     jadeRuntime: 'jaderuntime'
-  }));
+  })); 
 
   this.use(express.cookieParser());
   this.use(express.bodyParser());
