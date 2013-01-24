@@ -5,4 +5,4 @@ public/js/index-bundle.js
 public/js/templates/*
 public/components/*
 run.sh
-.env
+.env*
