@@ -33,7 +33,9 @@ app.configure(function(){
 
   this.locals.AUTH0_CLIENT_ID = process.env.AUTH0_CLIENT_ID;
   this.locals.AUTH0_DOMAIN = process.env.AUTH0_DOMAIN;
+  this.locals.AUTH0_CDN = process.env.AUTH0_CDN || '';
   this.locals.BASE_URL = process.env.BASE_URL || 'http://localhost:8080/';
+  this.locals.env = process.env.NODE_ENV;
   this.locals.env = process.env.NODE_ENV;
 
   this.requireAuthentication = function (req, res, next){

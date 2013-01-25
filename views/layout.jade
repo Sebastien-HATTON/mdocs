@@ -5,7 +5,7 @@ html
     meta(charset="utf8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
-    script(src="//sdk.auth0.com/auth0.js#client=" + AUTH0_CLIENT_ID + "&redirect_uri=" + BASE_URL + 'callback&cdn=https://dgxx8mgdel30c.cloudfront.net')
+    script(src="//sdk.auth0.com/auth0.js#client=" + AUTH0_CLIENT_ID + "&redirect_uri=" + BASE_URL + 'callback' + (AUTH0_CDN ? ('&cdn=' + AUTH0_CDN) : ''))
 
     link(type='text/css', rel='stylesheet', href='/css/glyph.css')
     link(type='text/css', rel='stylesheet', href='/css/bootstrap.css')
