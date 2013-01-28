@@ -2,7 +2,6 @@ require.config({
   "baseUrl": '/',
   "paths": {
     "jquery":     "components/jquery/jquery",
-    "jkey":       "components/jKey/jquery.jkey",
     "jeditable":  "components/jquery.jeditable/index",
     "jaderuntime":"components/jam-jade-runtime/jade.runtime",
     "scrollto":   "components/jquery-scrollto/scripts/jquery.scrollto",
@@ -21,7 +20,6 @@ require.config({
   },
   "shim": {
     "bootstrap": ["jquery"],
-    "jkey":      ["jquery"],
     "jeditable": ["jquery"],
     "scrollto":  ["jquery"],
     "share": {

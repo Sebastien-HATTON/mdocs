@@ -10,7 +10,6 @@
     "pilot": "git://github.com/jfromaniello/pilot.git",
     "text": "https://github.com/malsup/blockui.git",
     "showdown": "~0.3.1",
-    "jKey": "https://github.com/OscarGodson/jKey.git",
     "jquery.jeditable": "https://gist.github.com/raw/9aea9385fff316a01d14/003000ed8ea25b957bcf0f677e36614c2ab02b8f/jquery.jeditable.js",
     "jam-jade-runtime": "https://github.com/jfromaniello/jam-jade-runtime.git",
     "Font-Awesome": "https://github.com/FortAwesome/Font-Awesome.git#~3.0.1",
