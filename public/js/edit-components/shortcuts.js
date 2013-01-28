@@ -1,34 +1,52 @@
 define(function(require){
+
+  var editor = require('js/edit-components/editor');
   var $ = require('jquery');
-  require('jkey');
-  var modifier = 'alt';
 
-  if (navigator.appVersion.indexOf("Mac")!=-1){
-    modifier = 'option';
-  }
-
-  $(document).jkey(modifier + '+/', function() {
-    $('#key-shortcuts-help').modal({
-      keyboard: true,
-      show: true
-    });
-  });
-
-  $(document).jkey(modifier + '+s', function(){
-    $('#settings-popup').modal();
-  });
-
-  $(document).jkey(modifier + '+w', function(){
-    $('#editor').toggle();
-    $('#preview').toggle();
-  });
-
-  $(document).jkey(modifier + '+m', function(){
-    window.open('http://daringfireball.net/projects/markdown/syntax', '_blank');
-  });
-
-  $(document).jkey('esc', function(){
-    $('.modal').modal('hide');
-  });
-
+  editor.commands.addCommands([{
+    name: "showhelp",
+    bindKey: {win: "Alt-/", mac: "Alt-/", linux: "Alt-/"},
+    exec: function() {
+      $('#key-shortcuts-help').modal({
+        keyboard: true,
+        show: true
+      });
+    },
+    readOnly: true
+  }, {
+    name: "showsettings",
+    bindKey: {win: "Alt-s", mac: "Alt-s", linux: "Alt-s"},
+    exec: function() {
+      $('#settings-popup').modal();
+    },
+    readOnly: true
+  }, {
+    name: "showpreview",
+    bindKey: {win: "Alt-w", mac: "Alt-w", linux: "Alt-w"},
+    exec: function() {
+      window.open('/view/' + window.docId, '_blank');
+    },
+    readOnly: true
+  }, {
+    name: "gotoline",
+    bindKey: {win: "Alt-m", mac: "Alt-m", linux: "Alt-m"},
+    exec: function() {
+      window.open('http://daringfireball.net/projects/markdown/syntax', '_blank');
+    },
+    readOnly: true
+  }, {
+    name: "distractionfree",
+    bindKey: {win: "Alt-v", mac: "Alt-v", linux: "Alt-v"},
+    exec: function() {
+      if($('#editor').hasClass('span6')){
+        $('#preview').hide();
+        $('#editor').removeClass('span6').addClass('span12');
+      } else {
+        $('#preview').show();
+        $('#editor').addClass('span6').removeClass('span12');
+      }
+      editor.resize();
+    },
+    readOnly: true
+  }]);
 });

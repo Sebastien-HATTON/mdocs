@@ -9,18 +9,24 @@ block menu-extras
     a(href='#key-shortcuts-help', data-toggle="modal", title='keyboard shortcuts')
       i.icon-question-sign
 
-block content
-  .page-header
-      h1
-        #name= doc.name || 'untitled'
-  #editor
-  #preview
-  input#initial(type='hidden', value=snapshot)
+block container
   
-  if user
-    include includes/settings
-  
-  include includes/key-shortcuts-help
+  .container-fluid
+
+    .page-header
+        h1
+          #name= doc.name || 'untitled'
+
+    .row-fluid(style='height: 90%')
+      #editor.span6
+      #preview.span6
+    
+    input#initial(type='hidden', value=snapshot)
+    
+    if user
+      include includes/settings
+    
+    include includes/key-shortcuts-help
 
   
 
