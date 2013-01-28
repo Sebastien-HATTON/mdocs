@@ -5,7 +5,7 @@ define(function (require) {
 
   $('#sign-in, .sign-in').click(function(e){
     e.preventDefault();
-    window.Auth0.signIn();
+    window.Auth0.signIn({onestep: true});
   });
 
   $('#create-company').click(function (e) {
