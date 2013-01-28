@@ -7,14 +7,15 @@ mixin menu(menuTitle, url, tooltip, icon)
         i(class=icon)
       | #{menuTitle}
 
-.navbar.navbar-inverse.navbar-fixed-top
+.navbar.navbar-fixed-top
   .navbar-inner
     .container-fluid
       a.btn.btn-navbar.pull-left(data-toggle="collapse", data-target=".nav-collapse")
         i.icon-list.icon-white
         span.caret
 
-      a.brand(href="/") mdocs
+      a.brand(href="/") 
+        <strong>m</strong>docs
       
       div.nav-collapse
         ul.nav
@@ -30,7 +31,7 @@ mixin menu(menuTitle, url, tooltip, icon)
           |  login
       else
         div.dropdown.pull-right
-          a.btn.btn-inverse.dropdown-toggle(href="#", data-toggle="dropdown", role="button") 
+          a.btn.dropdown-toggle(href="#", data-toggle="dropdown", role="button") 
             if user.identities[0].isSocial
               | #{user.displayName} 
             else
