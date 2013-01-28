@@ -5,7 +5,8 @@ define(function (require) {
   require('jeditable');
 
   $('#name').editable('/doc/' + window.docId + '/title', {
-    'cssclass': 'input-title'
+    'cssclass': 'input-title',
+    'onblur' : 'submit'
   });
 
 });
