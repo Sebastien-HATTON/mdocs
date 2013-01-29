@@ -11,7 +11,7 @@ define(function(require){
   editor.renderer.setShowGutter(false);
   editor.setHighlightActiveLine(false);
   editor.renderer.setShowPrintMargin(false);
-  editor.setFontSize('24px');
+  editor.setFontSize('18px');
 
   editor.getSession().setValue($('#initial').val());
 

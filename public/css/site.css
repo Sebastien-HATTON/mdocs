@@ -11,21 +11,50 @@ body, html {
   height: 100%;
 }
 
+.container-fluid.desktop {
+  background: rgba(70, 119, 165, 0.09);
+  min-height: 1300px;
+}
+
 #editor{
   height: 100%;
   line-height: 30px;
+
+  font-size: 20px;
+  margin: 5px 5px;
+  min-height: 1200px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 1px #d8d8d8;
+  -moz-box-shadow: 1px 1px 1px #d8d8d8;
+  box-shadow: 1px 1px 1px #d8d8d8;
+  border: 1px solid #c6c9cb;
 }
 
 #preview {
   height: 100%;
   overflow-y: scroll;
   overflow-x: auto;
+
+  padding: 30px 3.5% 10px 3.5%;
+  min-height: 1200px;
+  background: #fff;
+  -webkit-box-shadow: 1px 1px 1px #d8d8d8;
+  -moz-box-shadow: 1px 1px 1px #d8d8d8;
+  box-shadow: 1px 1px 1px #d8d8d8;
+  border: 1px solid #c6c9cb;
+  margin-left: 5px;
+  margin-top: 5px;
+  margin-right: 0px;
+  font-size: 13.3pt;
+  word-spacing: .1em;
+  color: #252519;
 }
 
 .page-header {
   padding-bottom: 0px;
-  margin: 8px 0 8px;
-  border-bottom: 1px solid #eeeeee;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  border-bottom: 0;
 }
 
 .shortcut-list{
@@ -195,10 +224,8 @@ input.error {
 }
 
 .navbar-inner {
-    padding: 5px;  
+    padding: 5px;
     height: 24px; 
-    background-color: #e6e6e6; 
-    background-color: rgba(230,230,230,0.9); 
     -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),0 0 0 1px rgba(0,0,0,0.2),0 1px 2px rgba(0,0,0,0.25) !important; 
     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),0 0 0 1px rgba(0,0,0,0.2),0 1px 2px rgba(0,0,0,0.25) !important; 
     box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),0 0 0 1px rgba(0,0,0,0.2),0 1px 2px rgba(0,0,0,0.25) !important; 
@@ -222,3 +249,4 @@ input.error {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300; 
 }
+
