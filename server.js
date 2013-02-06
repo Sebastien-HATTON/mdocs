@@ -66,3 +66,5 @@ var server = http.createServer(app).listen(port, function(){
 
 var sioServer = require('./lib/setupSocketIO')(server, sessionOptions);
 require('./lib/setupOT')(sioServer);
+
+require('./lib/documentReducerTask')();
