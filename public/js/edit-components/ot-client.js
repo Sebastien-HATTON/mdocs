@@ -1,17 +1,20 @@
 define(function(require){
-  var editor = require('js/edit-components/editor');
+  "use strict";
+
   var sio = require('socket.io');
-  var socket = sio.connect('/');
 
   var ot                = require('ot');
   var EditorClient      = ot.EditorClient;
   var SocketIOAdapter   = ot.SocketIOAdapter;
   var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
-  var cmClient;
 
-  socket.on('connect', function () {
-    socket.once('opened', function () {
+  function bindEditor(editor) {
+    var cmClient;
+    var socket = sio.connect('/');
+    
+    socket
+      .once('opened', function () {
         editor.setOption('readOnly', false);
       }).once('doc', function (doc) {
         editor.setValue(doc.str);
@@ -21,6 +24,19 @@ define(function(require){
           new SocketIOAdapter(socket),
           new CodeMirrorAdapter(editor)
         );
-      }).emit('opendoc', {docId: window.docId});
-  });
+      });
+
+    function openDoc(){
+      socket.emit('opendoc', {docId: window.docId});
+    }
+      
+    socket
+      .once('connect', openDoc )
+      .on('reconnect', openDoc )
+      .on('opened', function () {
+        if (cmClient.state.resend) cmClient.state.resend(cmClient);
+      });
+  }
+
+  return { bindEditor: bindEditor };
 });

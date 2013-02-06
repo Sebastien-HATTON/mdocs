@@ -4,11 +4,11 @@ define(function(require){
   var editorWrapper = document.getElementById('editor');
   
   var cm = CodeMirror(editorWrapper, {
-    lineNumbers: true,
+    lineNumbers:  true,
     lineWrapping: true,
-    mode: 'markdown',
-    readOnly: 'nocursor',
-    theme: 'default'
+    mode:         'markdown',
+    readOnly:     'nocursor',
+    theme:        'default'
   });
 
   return cm;

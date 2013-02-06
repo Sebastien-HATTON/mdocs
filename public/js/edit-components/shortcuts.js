@@ -1,51 +1,42 @@
 define(function(require){
-  // var editor = require('js/edit-components/editor');
-  // var $ = require('jquery');
+  "use strict";
+  var $ = require('jquery');
+  
+  function showPopup(id, editor){
+    $(id).modal().one('hidden', function () {
+      editor.focus();
+    });
+  }
 
-  // editor.commands.addCommands([{
-  //   name: "showhelp",
-  //   bindKey: {win: "Alt-/", mac: "Alt-/", linux: "Alt-/"},
-  //   exec: function() {
-  //     $('#key-shortcuts-help').modal({
-  //       keyboard: true,
-  //       show: true
-  //     });
-  //   },
-  //   readOnly: true
-  // }, {
-  //   name: "showsettings",
-  //   bindKey: {win: "Alt-s", mac: "Alt-s", linux: "Alt-s"},
-  //   exec: function() {
-  //     $('#settings-popup').modal();
-  //   },
-  //   readOnly: true
-  // }, {
-  //   name: "showpreview",
-  //   bindKey: {win: "Alt-w", mac: "Alt-w", linux: "Alt-w"},
-  //   exec: function() {
-  //     window.open('/view/' + window.docId, '_blank');
-  //   },
-  //   readOnly: true
-  // }, {
-  //   name: "gotoline",
-  //   bindKey: {win: "Alt-m", mac: "Alt-m", linux: "Alt-m"},
-  //   exec: function() {
-  //     window.open('http://daringfireball.net/projects/markdown/syntax', '_blank');
-  //   },
-  //   readOnly: true
-  // }, {
-  //   name: "distractionfree",
-  //   bindKey: {win: "Alt-v", mac: "Alt-v", linux: "Alt-v"},
-  //   exec: function() {
-  //     if($('#editor').hasClass('span6')){
-  //       $('#preview').hide();
-  //       $('#editor').removeClass('span6').addClass('span12');
-  //     } else {
-  //       $('#preview').show();
-  //       $('#editor').addClass('span6').removeClass('span12');
-  //     }
-  //     editor.resize();
-  //   },
-  //   readOnly: true
-  // }]);
+  return {
+    bindEditor: function (editor) {
+      editor.setOption('extraKeys', {
+        "Enter": "newlineAndIndentContinueMarkdownList",
+        "Alt-/": showPopup.bind(null, '#key-shortcuts-help', editor),
+        "Alt-S": showPopup.bind(null, '#settings-popup', editor),
+        "Alt-M": showPopup.bind(null, '#syntax-help', editor),
+        "Alt-W": function() {
+          window.open('/view/' + window.docId, '_blank');
+        },
+        // "Alt-M": function() {
+        //   $('#syntax-help').modal({
+        //     remote: 'http://daringfireball.net/projects/markdown/syntax'
+        //   }).one('hidden', function () {
+        //     editor.focus();
+        //   });
+        //   // window.open('http://daringfireball.net/projects/markdown/syntax', '_blank');
+        // },
+        "Alt-V": function() {
+          if($('#editor').hasClass('span6')){
+            $('#preview').hide();
+            $('#editor').removeClass('span6').addClass('span12');
+          } else {
+            $('#preview').show();
+            $('#editor').addClass('span6').removeClass('span12');
+          }
+          editor.resize();
+        }
+      });
+    }
+  };
 });
