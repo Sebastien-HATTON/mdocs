@@ -14,10 +14,7 @@ You can also register your company or organization for free and share documentes
 -  ```AUTH0_CLIENT_SECRET```: take this settings from your auth0 dashboard
 -  ```AUTH0_DOMAIN```: take this settings from your auth0 dashboard
 
-If you want to be able to allow companies with google apps to register, you should register your application on the [google api console](https://code.google.com/apis/console/b/0/) and provide the following env variables:
-
--  ```GOOGLE_APPS_CLIENTID```: the clinde id of your application in google
--  ```GOOGLE_APPS_CLIENTSECRET```: the clinde id of your application in google
+If you want to be able to allow companies with google apps to register, you should register your application on the [google api console](https://code.google.com/apis/console/b/0/) and register the credentials in your auth0 dashboard.
 
 ## Run locally
 
