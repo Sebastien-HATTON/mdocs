@@ -59,8 +59,10 @@ app.get('/enterprise', function (req, res) {
 });
 
 require('./lib/routes')(app);
-require('./lib/setupShare')(app, sessionOptions);
 
-http.createServer(app).listen(port, function(){
+var server = http.createServer(app).listen(port, function(){
   console.log('listening in http://localhost:' + port);
 });
+
+var sioServer = require('./lib/setupSocketIO')(server, sessionOptions);
+require('./lib/setupOT')(sioServer);

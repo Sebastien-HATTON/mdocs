@@ -13,7 +13,6 @@ body, html {
 
 .container-fluid.desktop {
   background: rgba(70, 119, 165, 0.09);
-  min-height: 1300px;
 }
 
 #editor{
@@ -22,7 +21,6 @@ body, html {
 
   font-size: 20px;
   margin: 5px 5px;
-  min-height: 1200px;
   background: #fff;
   -webkit-box-shadow: 1px 1px 1px #d8d8d8;
   -moz-box-shadow: 1px 1px 1px #d8d8d8;
@@ -30,13 +28,14 @@ body, html {
   border: 1px solid #c6c9cb;
 }
 
+.CodeMirror{
+  height: 100%;
+}
+
 #preview {
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: auto;
-
+  overflow: auto;
   padding: 30px 3.5% 10px 3.5%;
-  min-height: 1200px;
   background: #fff;
   -webkit-box-shadow: 1px 1px 1px #d8d8d8;
   -moz-box-shadow: 1px 1px 1px #d8d8d8;

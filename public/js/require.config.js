@@ -7,28 +7,27 @@ require.config({
     "scrollto":   "components/jquery-scrollto/scripts/jquery.scrollto",
     "showdown":   "components/showdown/src/showdown",
     "reqwest":    "components/reqwest/reqwest",
-    "ace":        "components/ace/lib/ace",
-    "pilot":      "components/pilot/lib/pilot",
     "text":       "components/text/text",
     "bootstrap":  "components/bootstrap/docs/assets/js/bootstrap",
-    "share":      "sharejs/share",
-    "share-ace":  "sharejs/share-ace",
-    "bcsocket":   "sharejs/bcsocket",
     "zeroclipb":  "components/ZeroClipboard/ZeroClipboard",
     "Jvent":      "components/jvent/index",
-    "md5":        "components/JavaScript-MD5/md5"
+    "md5":        "components/JavaScript-MD5/md5",
+    "ot":         "components/ot/index",
+    "CodeMirror": "vendor/codemirror-compressed",
+    "socket.io":  "components/socket.io-client/dist/socket.io"
   },
   "shim": {
     "bootstrap": ["jquery"],
     "jeditable": ["jquery"],
     "scrollto":  ["jquery"],
-    "share": {
-      deps: ["jquery", "bcsocket"],
-      exports: "sharejs"
-    },
     "zeroclipb": {
-      exports: 'ZeroClipboard'
+      exports: "ZeroClipboard"
     },
-    "share-ace": ["share", 'ace/ace', 'ace/range']
+    "CodeMirror": {
+      exports: "CodeMirror"
+    },
+    "ot": {
+      exports: "ot"
+    }
   }
 });

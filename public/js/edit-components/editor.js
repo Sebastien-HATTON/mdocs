@@ -1,36 +1,15 @@
 define(function(require){
-  var $ = require('jquery');
-  var ace = require('ace/ace');
-  require("ace/theme/textmate");
-  require("ace/mode/markdown");
+  var CodeMirror = require('CodeMirror');
 
-  var editor = ace.edit("editor");
+  var editorWrapper = document.getElementById('editor');
+  
+  var cm = CodeMirror(editorWrapper, {
+    lineNumbers: true,
+    lineWrapping: true,
+    mode: 'markdown',
+    readOnly: 'nocursor',
+    theme: 'default'
+  });
 
-  editor.setReadOnly(true);
-  editor.getSession().setMode("ace/mode/markdown");
-  editor.renderer.setShowGutter(false);
-  editor.setHighlightActiveLine(false);
-  editor.renderer.setShowPrintMargin(false);
-  editor.setFontSize('18px');
-
-  editor.getSession().setValue($('#initial').val());
-
-
-  var session = editor.session;
-  var renderer = editor.renderer;
-
-  session.setUseWrapMode(true);
-  session.setWrapLimitRange(null, null);
-  renderer.setPrintMarginColumn(80);
-
-  //load share-ace bridge
-  require('share-ace');
-
-  editor.bindAceDocument = function (doc) {
-    doc.attach_ace(this);
-    this.setReadOnly(false);
-    this.focus();
-  };
-
-  return editor;
+  return cm;
 });
