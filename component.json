@@ -16,6 +16,7 @@
     "jquery-scrollto": "https://github.com/balupton/jquery-scrollto.git#~1.2.1",
     "JavaScript-MD5": "https://github.com/blueimp/JavaScript-MD5.git",
     "ot": "https://raw.github.com/jfromaniello/ot.js/resend-on-reconnect/dist/ot.js",
-    "socket.io-client": "https://github.com/LearnBoost/socket.io-client.git#~0.9.11"
+    "socket.io-client": "https://github.com/LearnBoost/socket.io-client.git#~0.9.11",
+    "codemirror": "latest"
   }
 }
