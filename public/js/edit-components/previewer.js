@@ -10,10 +10,9 @@ define(function(require){
   }
   
   var previewer = {
-    bindAceDocument: function (doc) {
-      update(doc.snapshot);
-      doc.on('change', function () {
-        update(doc.snapshot);
+    bindEditor: function (editor) {
+      editor.on('change', function () {
+        update(editor.getValue());
       });
     }
   };

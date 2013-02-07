@@ -16,16 +16,15 @@ block container
         h1
           #name= doc.name || 'untitled'
 
-    .row-fluid(style='height: 90%')
+    .row-fluid(style="height: 85%;")
       #editor.span6
       #preview.span6
-    
-    input#initial(type='hidden', value=snapshot)
     
     if user
       include includes/settings
     
     include includes/key-shortcuts-help
+    include includes/syntax-help
 
   
 

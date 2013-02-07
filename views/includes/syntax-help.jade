@@ -1,0 +1,150 @@
+#syntax-help.form-horizontal.modal.hide.fade(tabindex="-1")
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+    h3 markdown syntax cheatsheet
+  .modal-body(style='max-height: 480px; overflow-y: auto;')
+    :markdown
+      ### Headers
+
+      ```
+      # Header 1
+
+      Header 1
+      ========
+
+      Header 2
+      --------
+      
+      ## Header 2
+      ```
+      
+      ### Links
+
+      Inline:
+
+      ```
+        An [example](http://url.com/ "Title")
+      ```
+
+      Reference-style labels (titles are optional):
+      
+      ```  
+        An [example][id]. Then, anywhere
+        else in the doc, define the link:
+
+        [id]: http://example.com/  "Title"
+      ```
+
+      ### Images
+
+      ```
+      ![alt text](/path/img.jpg "Title")
+
+      or
+
+      ![alt text][id]
+
+        [id]: /url/to/img.jpg "Title"
+      ```
+
+      ### Phrase Emphasis
+
+      ```
+      *italic*  _italic_
+      **bold**  __bold__
+      ```
+
+      ### Lists
+
+      Lists
+      
+      Ordered, without paragraphs:
+      
+      ```
+      1.  Foo
+      2.  Bar
+      ```
+
+      Unordered, with paragraphs:
+      
+      ```
+      *   A list item.
+
+          With multiple paragraphs.
+
+      *   Bar
+      ```
+
+      You can nest them:
+      ```
+      *   Arnaldo
+          * foo
+      *   Bar
+          1.  bor
+          2.  bil
+              * bul
+          3. berport
+      *   camois
+      ```
+      
+      ### Blockquotes
+
+      ```
+      > Email-style angle brackets
+
+      > are used for blockquotes.
+
+      > > And, they can be nested.
+
+      > >
+      > * You can quote a list.
+      > * Etc.
+      ```
+
+      ### Code Spans
+
+      ```
+      `<code>` spans are delimited
+      by backticks.
+
+      You can include literal backticks
+      like `` `this` ``.
+      ```
+
+      ### Preformatted Code Blocks
+      
+      Indent every line of a code block by at least 4 spaces or 1 tab, and use a colon at the end of the preceding paragraph.
+
+      ```
+      This is a normal paragraph:
+
+          This is a preformatted
+          code block.
+
+      Preceded by a space, the colon
+      disappears. :
+
+          This is a preformatted
+          code block.
+      ```
+
+      ### Horizontal Rules
+      
+      Three or more dashes or asterisks:
+
+      ```
+      ---
+
+      * * *
+
+      - - - -
+      ```
+
+      ### Manual Line Breaks
+      
+      End a line with two or more spaces:
+      
+      ```
+      Roses are red,  
+      Violets are blue.
+      ```

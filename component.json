@@ -6,9 +6,6 @@
     "bootstrap": "~2.2.2",
     "require": "~2.1.2",
     "reqwest": "~0.6.3",
-    "ace": "https://github.com/ajaxorg/ace/archive/7601a904cb3dfbcb7f815778e1e380eb431f1644.zip",
-    "pilot": "git://github.com/jfromaniello/pilot.git",
-    "text": "https://github.com/malsup/blockui.git",
     "showdown": "~0.3.1",
     "jquery.jeditable": "https://gist.github.com/raw/9aea9385fff316a01d14/003000ed8ea25b957bcf0f677e36614c2ab02b8f/jquery.jeditable.js",
     "jam-jade-runtime": "https://github.com/jfromaniello/jam-jade-runtime.git",
@@ -17,6 +14,8 @@
     "jvent": "https://github.com/jfromaniello/jvent/archive/master.zip",
     "es5-shim": "https://github.com/kriskowal/es5-shim.git#~2.0.5",
     "jquery-scrollto": "https://github.com/balupton/jquery-scrollto.git#~1.2.1",
-    "JavaScript-MD5": "https://github.com/blueimp/JavaScript-MD5.git"
+    "JavaScript-MD5": "https://github.com/blueimp/JavaScript-MD5.git",
+    "ot": "https://raw.github.com/jfromaniello/ot.js/resend-on-reconnect/dist/ot.js",
+    "socket.io-client": "https://github.com/LearnBoost/socket.io-client.git#~0.9.11"
   }
 }
