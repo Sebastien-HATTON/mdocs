@@ -1,15 +1,11 @@
 extends layout
 
 block content
- .page-header
-    h1
-      #name mdocs
-    
-    p Your company 
-      strong #{domain} 
-      |  has been setup. Please 
-      a.sign-in(href='/e/qraftlabs.com') login
-      |  now.
+  .row-fluid
+    .span12(style="font-size: 20px; line-height: 39px; padding-top: 20px;")
+      p Your company 
+        strong #{domain} 
+        |  has been setup. 
 
-    p You can access from now on with this url:
-    a(href='/e/qraftlabs.com') #{baseUrl}e/qraftlabs.com
+      p Use this url to login from now on:
+      a(href='/e/qraftlabs.com', style="font-size: 30px") #{baseUrl}e/qraftlabs.com
