@@ -54,7 +54,8 @@ if(process.env.NODE_ENV === 'production'){
   tasks = tasks.concat([
     executeCommand('node_modules/.bin/jade-amd --from views/includes --to public/js/templates --jaderuntime jaderuntime'),
     optimize('edit'),
-    optimize('index')
+    optimize('index'),
+    optimize('list')
   ]);
 
 }
