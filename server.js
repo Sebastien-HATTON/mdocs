@@ -58,13 +58,17 @@ app.get('/enterprise', function (req, res) {
   return res.render('landing-enterprise');
 });
 
-require('./lib/routes')(app);
 
-var server = http.createServer(app).listen(port, function(){
-  console.log('listening in http://localhost:' + port);
-});
+var server = http.createServer(app);
 
 var sioServer = require('./lib/setupSocketIO')(server, sessionOptions);
+
+require('./lib/routes')(app, sioServer);
+
 require('./lib/setupOT')(sioServer);
 
 require('./lib/documentReducerTask')();
+
+server.listen(port, function(){
+  console.log('listening in http://localhost:' + port);
+});

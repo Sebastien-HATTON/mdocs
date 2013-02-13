@@ -8,6 +8,21 @@ define(function(require){
   var SocketIOAdapter   = ot.SocketIOAdapter;
   var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
+  var documentDeletedWarning = require('js/templates/document-deleted-warning');
+
+
+  function onDocDeleted() {
+    $(documentDeletedWarning())
+      .appendTo('body')
+      .modal('show')
+      .on('hidden', function () {
+        window.location = '/';
+      });
+  }
+
+  function onTitleChanged(change){
+    $('#name').html(change.title);
+  }
 
   function bindEditor(editor) {
     var cmClient;
@@ -24,7 +39,10 @@ define(function(require){
           new SocketIOAdapter(socket),
           new CodeMirrorAdapter(editor)
         );
-      }).on('cursor', function(cursor){
+      })
+      .once('document deleted', onDocDeleted)
+      .on('new title', onTitleChanged)
+      .on('cursor', function(cursor){
         setTimeout(function(){
           var clientName = cmClient.getClientObject(cursor.clientId).name;
           $('.tooltip-inner:contains(' + clientName + ')').parent().remove();
