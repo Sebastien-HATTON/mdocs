@@ -252,3 +252,8 @@ h1, h2, h3, h4, h5, h6 {
 .CodeMirror .other-client {
   margin-top: -18px;
 }
+
+.tooltip.top {
+  margin-top: -3px;
+  margin-left: -10px;
+}

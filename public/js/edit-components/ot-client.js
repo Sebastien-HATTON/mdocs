@@ -2,7 +2,7 @@ define(function(require){
   "use strict";
 
   var sio = require('socket.io');
-
+  var $                 = require('jquery');
   var ot                = require('ot');
   var EditorClient      = ot.EditorClient;
   var SocketIOAdapter   = ot.SocketIOAdapter;
@@ -24,6 +24,17 @@ define(function(require){
           new SocketIOAdapter(socket),
           new CodeMirrorAdapter(editor)
         );
+      }).on('cursor', function(cursor){
+        setTimeout(function(){
+          var clientName = cmClient.getClientObject(cursor.clientId).name;
+          $('.tooltip-inner:contains(' + clientName + ')').parent().remove();
+          $('.other-client[data-clientid="' + cursor.clientId + '"]').tooltip({
+            title: clientName
+          }).tooltip('show');
+          setTimeout(function(){
+            $('.tooltip-inner:contains(' + clientName + ')').parent().remove();
+          }, 5000);
+        }, 100);
       });
 
     function openDoc(){
