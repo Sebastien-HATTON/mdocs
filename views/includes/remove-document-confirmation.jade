@@ -1,0 +1,11 @@
+.modal.hide.fade
+  .modal-header
+    button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+    h3 Delete document
+  .modal-body
+    p Are you sure you want to delete 
+      strong #{name}
+      | ?
+  .modal-footer
+    a.btn(href='#', data-dismiss="modal", aria-hidden="true") Close
+    a.btn.btn-danger.yes-remove(href='#') Yes, I am

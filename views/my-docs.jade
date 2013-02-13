@@ -6,10 +6,23 @@ block content
       tr
         th Name
         th Last access
+        th 
     tbody
       each doc in docs
         tr
           th
             a(href='/doc/' + doc._id.toString())= doc.name || 'untitled'
           th= moment(doc.lastAccess).fromNow()
+          th
+            if(user._id === doc.owner)
+              button.btn.btn-danger.remove-doc(data-id=doc._id.toString(), data-name=doc.name) remove
 
+block scripts
+  if env != "production"
+    script(src="/components/require/require.js")
+    script(src="/js/require.config.js")
+  else
+    script(src="/js/list-bundle.js")
+
+  script(type="text/javascript")
+    require(["js/list"], function(index){});
