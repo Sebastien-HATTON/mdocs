@@ -20,6 +20,10 @@ define(function(require){
       });
   }
 
+  function onTitleChanged(change){
+    $('#name').html(change.title);
+  }
+
   function bindEditor(editor) {
     var cmClient;
     var socket = sio.connect('/');
@@ -37,6 +41,7 @@ define(function(require){
         );
       })
       .once('document deleted', onDocDeleted)
+      .on('new title', onTitleChanged)
       .on('cursor', function(cursor){
         setTimeout(function(){
           var clientName = cmClient.getClientObject(cursor.clientId).name;
