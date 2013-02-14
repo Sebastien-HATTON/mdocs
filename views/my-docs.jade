@@ -1,17 +1,30 @@
 extends layout
 
+block head-extra
+  link(type='text/css', rel='stylesheet', href='/css/select2.css')
+
+
 block content
   table.table.mydocs-table
     thead
       tr
         th Name
+        th(style="width: 30%;") In
         th(style="width: 20%;") Last access
         th 
     tbody
       each doc in docs
-        tr
+        tr(data-docid=doc._id.toString())
           th
             a(href='/doc/' + doc._id.toString())= doc.name || 'untitled'
+          th
+            .tag-list
+              include includes/tag-list
+
+            .tag-editor(style='display: none; font-size: 14px; font-weight: normal;')
+              input.tag-changer(type="hidden", value=(doc.tags || []).join(','), style='width: 300px')
+              button.btn.btn-primary.save-tags save
+
           th= moment(doc.lastAccess).fromNow()
           th
             if(user._id === doc.owner)
