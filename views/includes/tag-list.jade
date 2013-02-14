@@ -1,0 +1,3 @@
+button.btn.edit-tags-button edit
+each tag in (doc.tags || [])
+  a(href='/tag/' + tag)= tag

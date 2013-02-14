@@ -3,6 +3,7 @@ require.config({
   "paths": {
     "jquery":     "components/jquery/jquery",
     "jeditable":  "components/jquery.jeditable/index",
+    "select2":     "components/select2/index",
     "jaderuntime":"components/jam-jade-runtime/jade.runtime",
     "scrollto":   "components/jquery-scrollto/scripts/jquery.scrollto",
     "showdown":   "components/showdown/src/showdown",
@@ -20,6 +21,7 @@ require.config({
     "bootstrap": ["jquery"],
     "jeditable": ["jquery"],
     "scrollto":  ["jquery"],
+    "select2":   ["jquery"],
     "zeroclipb": {
       exports: "ZeroClipboard"
     },

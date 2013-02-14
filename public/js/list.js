@@ -1,7 +1,9 @@
 define(function (require) {
   require('bootstrap');
+  require('select2');
   var $ = require('jquery');
   var removeDocConfirmationTempl = require('js/templates/remove-document-confirmation');
+  var tagListTmpl = require('js/templates/tag-list');
 
   $('.remove-doc').on('click', function(e){
     e.preventDefault();
@@ -27,5 +29,37 @@ define(function (require) {
           row.remove();
         });
       });
+  });
+
+  $('.tag-list').on('click', '.edit-tags-button', function(){
+    var tagList = $(this).parents('.tag-list').hide();
+    var tagEditor = tagList.siblings('.tag-editor').show();
+    var docId = tagList.parents('tr').attr('data-docid');
+
+    tagEditor.find('.tag-changer').select2({
+      tags: tagEditor.find('.tag-changer').val().split(',')
+    });
+
+    tagEditor
+      .find('.save-tags')
+      .off('click')
+      .on('click', function(){
+        var tags = tagEditor.find('.tag-changer').select2('val');
+        
+        $.ajax({
+          type:        'POST',
+          url:         '/doc/' + docId + '/tags',
+          contentType: 'application/json',
+          data: JSON.stringify(tags)
+        }).done(function(){
+          tagList.html(tagListTmpl({
+            doc: {tags: tags}
+          }));
+        });
+
+        tagEditor.hide();
+        tagList.show();
+      });
+
   });
 });
