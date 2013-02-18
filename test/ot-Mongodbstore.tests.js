@@ -9,7 +9,7 @@ var TextOperation    = ot.TextOperation;
 var Cursor           = ot.Cursor;
 
 
-describe.only('mongodbstore for ot.js', function () {
+describe('mongodbstore for ot.js', function () {
   var mongoStore;
 
   before(function (done) {

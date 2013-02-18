@@ -20,8 +20,8 @@
       include visibility-row
 
       if !user.identities[0].isSocial
-        - var companyVisibilty = doc.visibility && doc.visibility.companies[user.identities[0].connection];
-        - var d = { level:  'company', company:  user.identities[0].connection, type:   companyVisibilty || 'none'};
+        - var companyVisibilty = doc.visibility && doc.visibility.companies[user.companyId];
+        - var d = { level:  'company', company:  user.companyId, type:   companyVisibilty || 'none'};
         include visibility-row
 
     h4 Collaborators

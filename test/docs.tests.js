@@ -149,6 +149,7 @@ describe('docs', function () {
     it('should return "can edit" if user belongs to a company that can edit', function () {
       var user = {
         _id: ObjectID.createPk(),
+        companyId: 'microsoft',
         emails: [{
           value: 'billgates@123.com'
         }],
@@ -164,6 +165,7 @@ describe('docs', function () {
     it('should return "can view" if user belongs to a company that can only view', function () {
       var user = {
         _id: ObjectID.createPk(),
+        companyId: 'kluglabs',
         emails: [{
           value: 'billgates@123.com'
         }],
@@ -228,6 +230,7 @@ describe('docs', function () {
 
     it('should return docs with company-wide visibility', function (done) {
       var user = {
+        companyId: 'kluglabs',
         identities: [{
           connection: 'kluglabs'
         }],
@@ -245,6 +248,7 @@ describe('docs', function () {
 
     it('should not return docs with company-wide visibility but user from other company', function (done) {
       var user = {
+        companyId: 'qraftlabs',
         identities: [{
           connection: 'qraftlabs'
         }],
