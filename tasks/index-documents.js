@@ -14,16 +14,9 @@ var ObjectID = require('mongodb').ObjectID;
 function getDocuments(callback){
   getDb(function(db){
     db.collection('documents').find({
-      $and: [
-        {  
-          'visibility.companies' : { $exists: true } 
-        },
-        {
-          $or: [
-                  { indexMe: { $exists: false } },
-                  { indexMe: true }
-          ]
-        }
+      $or: [
+        { indexMe: { $exists: false } },
+        { indexMe: true }
       ]
     }).toArray(callback);
   });
