@@ -23,7 +23,10 @@ mixin menu(menuTitle, url, tooltip, icon)
           +menu('My docs', '/my-docs', 'open list of documents', 'icon-folder-open')
           
           block menu-extras
-          
+        
+        form.navbar-search.pull-left(action='/search', _lpchecked='1')
+          input.search-query.span2(type='text', placeholder='Search', name='q')
+  
         
       if !user
         a#sign-in.sign-in.btn.btn-primary.pull-right(href="/login") 

@@ -5,6 +5,9 @@ block head-extra
 
 
 block content
+  if typeof search !== 'undefined'
+    div Search results for: #{search}
+ 
   table.table.mydocs-table
     thead
       tr

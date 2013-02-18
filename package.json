@@ -31,7 +31,9 @@
     "passport.socketio": "1.0.0",
     "socket.io": "~0.9.13",
     "ot": "https://github.com/jfromaniello/ot.js/tarball/operations-store-interface",
-    "marked": "~0.2.8"
+    "marked": "~0.2.8",
+    "cheerio": "~0.10.7",
+    "elastical": "0.0.11"
   },
   "engines": {
     "node": "0.8.x",
