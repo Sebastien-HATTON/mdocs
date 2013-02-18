@@ -3,7 +3,7 @@ var url = require('url');
 var elastical = require('elastical');
 var parsedElasticalUrl = url.parse(process.env.ELASTIC_SEARCH_SERVER || 'http://localhost:9200');
 var elasticClient = new elastical.Client(parsedElasticalUrl.hostname, {
-  port: parseInt(parsedElasticalUrl.port, 10),
+  port: parseInt(parsedElasticalUrl.port || '80', 10),
   auth: parsedElasticalUrl.auth
 });
 
@@ -60,7 +60,7 @@ function indexDoc(doc, callback){
   delete doc.owner;
   delete doc.collaborators;
   delete doc.visibility;
-  
+
   elasticClient.index('documents', 'doc', doc, options, function(err){
     if(err) return callback(err);
     setIndexedFlag(id, callback);
