@@ -44,9 +44,7 @@ function optimize (from) {
 }
 
 
-var tasks = [
-  executeCommand("bower install")
-];
+var tasks = [];
 
 if(process.env.NODE_ENV === 'production'){
   console.log('env is production');

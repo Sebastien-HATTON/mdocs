@@ -1,0 +1,9 @@
+{
+  "name": "JavaScript-MD5",
+  "version": "0.0.0",
+  "commit": "d2a38e4f5a71d9461ff9d37d425b8557733496c6",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blueimp/JavaScript-MD5.git"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "jquery-scrollto",
+  "version": "1.2.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/balupton/jquery-scrollto.git"
+  }
+}

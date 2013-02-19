@@ -4,6 +4,5 @@ public/js/edit-bundle.js
 public/js/index-bundle.js
 public/js/list-bundle.js
 public/js/templates/*
-public/components/*
 run.sh
 .env*

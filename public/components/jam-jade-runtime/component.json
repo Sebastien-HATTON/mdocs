@@ -1,0 +1,9 @@
+{
+  "name": "jam-jade-runtime",
+  "version": "0.0.0",
+  "commit": "ce4dcca267b98c4bb03ff61a313d7b18cffe0d2a",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jfromaniello/jam-jade-runtime.git"
+  }
+}
