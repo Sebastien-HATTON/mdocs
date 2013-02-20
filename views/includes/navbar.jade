@@ -10,23 +10,17 @@ mixin menu(menuTitle, url, tooltip, icon)
 .navbar.navbar-fixed-top
   .navbar-inner
     .container-fluid
-      a.btn.btn-navbar.pull-left(data-toggle="collapse", data-target=".nav-collapse")
-        i.icon-list.icon-white
-        span.caret
+      
 
       a.brand(href="/") 
-        <strong>m</strong>docs
+        strong m
+        | docs
       
-      div.nav-collapse
-        ul.nav
-          +menu('New', '/new', 'create a new document', 'icon-file')
-          +menu('My docs', '/my-docs', 'open list of documents', 'icon-folder-open')
-          
-          block menu-extras
-        
-        form.navbar-search.pull-left(action='/search', _lpchecked='1')
-          input.search-query.span2(type='text', placeholder='Search', name='q')
+      
   
+      a.btn.btn-navbar.pull-right(data-toggle="collapse", data-target=".nav-collapse")
+        i.icon-list.icon-white
+        span.caret
         
       if !user
         a#sign-in.sign-in.btn.btn-primary.pull-right(href="/login") 
@@ -45,3 +39,13 @@ mixin menu(menuTitle, url, tooltip, icon)
               a(href="/logout")
                 span.icon-signout
                 | sign out
+
+      div.nav-collapse
+        ul.nav
+          +menu('New', '/new', 'create a new document', 'icon-file')
+          +menu('My docs', '/my-docs', 'open list of documents', 'icon-folder-open')
+
+          block menu-extras
+        
+        form.navbar-search.pull-left(action='/search', _lpchecked='1')
+          input.search-query.span2(type='text', placeholder='Search', name='q')

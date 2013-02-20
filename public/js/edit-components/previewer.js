@@ -17,5 +17,21 @@ define(function(require){
     }
   };
 
+  $('#preview-menu').on('click', function(e){
+    e.preventDefault();
+    var isClosed = $('#preview-menu i')
+      .toggleClass('icon-eye-open icon-eye-close')
+      .hasClass('icon-eye-close');
+
+    if(isClosed){
+      $('#preview').hide();
+      $('#editor').show();
+    } else {
+      $('#preview').show();
+      $('#editor').hide();
+    }
+
+  });
+
   return previewer; 
 });
