@@ -289,3 +289,82 @@ h1, h2, h3, h4, h5, h6 {
 .tag-list a {
   margin: 2px;
 }
+
+.comments-button {
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg); 
+  transform: rotate(-90deg); 
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  transform-origin: right bottom;
+  position: absolute;
+  right: 0;
+  top: 30%;
+}
+
+#comments-container {
+  background-color: white;
+  position: absolute;
+  right: 1px;
+  top: 20%;
+  height: 70%;
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 300px;
+  display: none;
+}
+
+
+
+#comments-container ul {
+  height: 80%;
+  overflow: auto; 
+  position:relative;
+  margin: 0;
+}
+
+
+#comments-container ul li{
+  list-style: none;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#comments-container ul li img {
+  width: 40px; 
+  height: 40px; 
+  max-width: none;
+  border-radius: 2px;
+  position: absolute;
+  left: 5px;
+}
+
+.comment-block {
+  margin-right: 12px;
+  min-height: 51px;
+  padding: 0 10px 0 40px;
+  position: relative;
+  top: -3px;
+}
+
+.comment-text-content{
+  word-wrap: break-word;
+}
+.comment-author {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+}
+
+#new-comment{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+#new-comment input {
+  margin: 10px;
+  width: 90%;
+}
