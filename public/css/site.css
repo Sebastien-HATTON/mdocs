@@ -45,9 +45,9 @@ body, html {
 */
 #editor{
   height: 100%;
-  line-height: 30px;
+  line-height: 1em;
 
-  font-size: 20px;
+  font-size: 13px;
   margin: 5px 5px;
   background: #fff;
   -webkit-box-shadow: 1px 1px 1px #d8d8d8;
@@ -112,7 +112,7 @@ body, html {
 }
 
 #preview{
-  /*display: none;*/
+  font-size: 13px
 }
 
 .input-title input {
